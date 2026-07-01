@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexión a bases de datos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_temas.css">
+</head>
+<body>
+    <header>
+        <div class="hdr-top">
+            <div class="hdr-left">
+                <span class="unidad-badge">Unidad III</span>
+                <h2>Conexión a bases de datos en la nube</h2>
+                <p class="header-description">La conexión a una base de datos en la nube es el proceso mediante el cual una aplicación establece un canal de comunicación con un servidor remoto para acceder, consultar o modificar información almacenada en internet, utilizando credenciales, protocolos y métodos específicos que garantizan una transmisión segura y confiable de los datos.</p>
+            </div>
+            
+        </div>
+    </header>
+    
+
+    
+        <main>
+        <a href="index.html" class="back-btn">Volver al inicio</a>
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">1</div>
+                <h2>¿Qué es la conexión a una base de datos en la nube?</h2>
+            </div>
+            <div class="temas-body">
+                <p>Conectarse a una base de datos en la nube significa establecer una comunicación entre dos puntos: por un lado, la aplicación, programa o herramienta que necesita leer o guardar información, por otro lado, el servidor remoto donde realmente vive esa información, alojado en internet.</p>
+                <p>A diferencia de una base de datos instalada en una computadora local, donde la información está físicamente a unos centímetros de quien la consulta, en la nube los datos pueden estar en otro estado, país o incluso continente.</p>
+                <p>Crear una base de datos y conectarse a ella son dos procesos distintos. Crear consiste en definir su estructura y darla de alta en el servidor; conectarse consiste en abrir un canal de comunicación hacia esa base de datos ya existente, para poder leer o modificar su contenido desde una aplicación externa.</p>
+                <h3>Elementos que intervienen en la conexión</h3>
+                <ul class="lista">
+                    <li><strong>Dirección del servidor (Host o Endpoint)</strong><p>Es la dirección de internet donde se encuentra la base de datos. Permite que la aplicación sepa a qué servidor debe conectarse.</p></li>
+                    <li><strong>Puerto de comunicación</strong><p>Es un número que identifica el servicio de base de datos dentro del servidor, indicando el punto específico por el que se realizará la conexión.</p></li>
+                    <li><strong>Credenciales de acceso (Usuario y contraseña)</strong><p>Son los datos de autenticación que verifican que el usuario tiene permiso para acceder a la base de datos y proteger su información.</p></li>
+                    <li><strong>Nombre de la base de datos</strong><p>Identifica la base de datos específica con la que se desea trabajar cuando un servidor aloja varias bases de datos.</p></li>
+                    <li><strong>Protocolo y cifrado de la comunicación</strong><p>Son las reglas y mecanismos de seguridad que permiten transmitir la información entre la aplicación y la base de datos de forma segura, evitando que sea interceptada o leída por terceros.</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">2</div>
+                <h2>Métodos de conexión</h2>
+            </div>
+            <div class="temas-body">
+                <ul class="lista">
+                    <li><strong>Cadena de conexión (Connection String)</strong><p>Reúne en una sola línea toda la información necesaria para conectarse a una base de datos: servidor, puerto, usuario, contraseña y nombre de la base de datos. Es uno de los métodos más utilizados en aplicaciones que trabajan con bases de datos relacionales.</p></li>
+                    <li><strong>Consola o cliente de línea de comandos</strong><p>Permite conectarse a la base de datos escribiendo comandos de texto desde una herramienta instalada en el equipo. Es muy utilizado por administradores y desarrolladores para realizar consultas, pruebas y tareas de mantenimiento de forma rápida.</p></li>
+                    <li><strong>Interfaz gráfica (Panel web del proveedor)</strong><p>Consiste en acceder a un panel de administración desde el navegador para consultar y administrar la base de datos sin necesidad de programar. Es ideal para configuraciones y tareas básicas de administración.</p></li>
+                    <li><strong>Controladores o librerías oficiales (Drivers)</strong><p>Utiliza librerías proporcionadas por el fabricante de la base de datos para que una aplicación pueda conectarse automáticamente. Es el método más empleado en el desarrollo de software.</p></li>
+                    <li><strong>API (Interfaz de Programación de Aplicaciones)</strong><p>La aplicación se comunica con un servicio intermedio mediante solicitudes HTTP, sin conectarse directamente a la base de datos. Es un método común en plataformas en la nube y bases de datos NoSQL.</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">3</div>
+                <h2>Integración de la conexión</h2>
+            </div>
+            <div class="temas-body">
+                <p>Una vez que la conexión se ha establecido correctamente, el siguiente paso es la integración: lograr que la aplicación utilice esa conexión de forma constante y ordenada para realizar las operaciones que necesita como parte natural de su funcionamiento.</p>
+                <ul class="lista">
+                    <li><strong>Configuración centralizada de la conexión</strong><p>Consiste en guardar la información de conexión en archivos de configuración o variables de entorno en lugar de escribirla directamente en el código. Esto facilita la administración y mejora la seguridad de la aplicación.</p></li>
+                    <li><strong>Mantener la conexión abierta o gestionarla por solicitud</strong><p>La aplicación puede mantener una conexión activa durante su funcionamiento o abrir y cerrar una nueva conexión cada vez que necesite acceder a la base de datos.</p></li>
+                    <li><strong>Manejo de errores de conexión</strong><p>Una aplicación debe estar preparada para detectar y responder a problemas de conexión, como credenciales incorrectas o fallas en el servidor, e intentar restablecer la conexión automáticamente cuando sea posible.</p></li>
+                    <li><strong>Pruebas de conexión antes de pasar a producción</strong><p>Antes de poner una aplicación en funcionamiento, es importante verificar que la conexión a la base de datos sea correcta, confirmando que la configuración, las credenciales y los permisos funcionan adecuadamente.</p></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-inst">Instituto Tecnológico</p>
+        <h3>Contacto</h3>
+        <p>Carretera Huejutla – Chalahuiyapa S/N,</p>
+        <p>C.P. 43000, Huejutla de Reyes, Hidalgo, México</p>
+        <p>789 8962088 al 91</p>
+    </footer>
+</body>
+</html>

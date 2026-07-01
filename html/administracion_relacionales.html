@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Bases de Datos Relacionales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_temas.css">
+</head>
+<body>
+    <header>
+        <div class="hdr-top">
+            <div class="hdr-left">
+                <span class="unidad-badge">Unidad I</span>
+                <h2>Administración de Bases de Datos Relacionales</h2>
+                <p class="header-description">La administración de una base de datos relacional es el conjunto de tareas que permiten controlar quién accede a la información, qué operaciones puede realizar y cómo se protegen los datos, mediante la asignación de usuarios, roles y privilegios específicos.</p>
+            </div>
+            
+        </div>
+        <nav class="subnav">
+            <ul>
+                <li><a href="gestores_relacionales.html">Gestores</a></li>
+                <li><a href="creacion_relacionales.html">Creación</a></li>
+                <li><a href="manipulacion_relacionales.html">Manipulación</a></li>
+                <li><a href="administracion_relacionales.html" class="activo">Administración</a></li>
+                <li><a href="#">Práctica</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    
+        <main>
+        <a href="index.html" class="back-btn">Volver al inicio</a>
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">1</div>
+                <h2>Administración de bases de datos relacionales en la nube</h2>
+            </div>
+            <div class="temas-body">
+                <p>Las bases de datos son un componente fundamental en las aplicaciones y páginas web, ya que almacenan y organizan la información necesaria para su funcionamiento. Debido a la importancia de los datos que contienen, es indispensable aplicar medidas de administración y seguridad que permitan proteger la información y garantizar su correcta gestión.</p>
+                <p>Una de las principales estrategias para administrar una base de datos consiste en crear usuarios y asignarles roles o privilegios específicos. Esto permite establecer distintos niveles de acceso según las funciones de cada persona, evitando que todos los usuarios tengan control total sobre la información almacenada.</p>
+                <p>El acceso a la base de datos comienza cuando un usuario proporciona sus credenciales. El sistema verifica su identidad y, una vez validado el acceso, determina los permisos asociados a su cuenta. De esta forma, cada usuario puede utilizar únicamente las funciones y recursos que le han sido autorizados.</p>
+                <p>La asignación de privilegios contribuye a proteger la información, ya que reduce el riesgo de accesos no autorizados, modificaciones indebidas o eliminación accidental de datos.</p>
+                <h3>Privilegios más utilizados</h3>
+                <div>
+                    <table class="tabla-bd">
+                        <thead>
+                            <tr>
+                                <th>Privilegio</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>SELECT</strong></td><td>Permite consultar y leer datos de una o varias tablas.</td></tr>
+                            <tr><td><strong>INSERT</strong></td><td>Permite agregar nuevos registros a las tablas de la base de datos.</td></tr>
+                            <tr><td><strong>UPDATE</strong></td><td>Permite modificar los registros existentes en las tablas de la base de datos.</td></tr>
+                            <tr><td><strong>DELETE</strong></td><td>Permite eliminar registros de las tablas de la base de datos.</td></tr>
+                            <tr><td><strong>CREATE</strong></td><td>Permite crear nuevos objetos, como bases de datos, tablas, vistas o índices.</td></tr>
+                            <tr><td><strong>DROP</strong></td><td>Permite eliminar objetos existentes, como bases de datos, tablas, vistas o índices.</td></tr>
+                            <tr><td><strong>ALTER</strong></td><td>Permite modificar la estructura de objetos existentes, como tablas o vistas.</td></tr>
+                            <tr><td><strong>INDEX</strong></td><td>Permite crear y gestionar índices en las tablas de la base de datos.</td></tr>
+                            <tr><td><strong>CREATE USER</strong></td><td>Permite crear nuevos usuarios en la base de datos.</td></tr>
+                            <tr><td><strong>GRANT</strong></td><td>Permite otorgar privilegios a otros usuarios para que puedan realizar acciones específicas en la base de datos.</td></tr>
+                            <tr><td><strong>REVOKE</strong></td><td>Permite revocar privilegios previamente otorgados a otros usuarios.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">2</div>
+                <h2>Ejemplos de permisos (GRANT)</h2>
+            </div>
+            <div class="temas-body">
+                <p>A continuación se muestran ejemplos de comandos para otorgar distintos permisos sobre tablas, junto con su descripción.</p>
+                <table class="tabla-bd">
+                    <thead>
+                        <tr>
+                            <th>Permiso</th>
+                            <th>Comando</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Consultar (solo lectura)</strong></td>
+                            <td><pre><code>GRANT SELECT ON nombre_base_datos.nombre_tabla TO 'usuario'@'localhost';</code></pre></td>
+                            <td>Permite visualizar la información almacenada en la tabla; no autoriza insertar, modificar ni eliminar registros.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Agregar registros</strong></td>
+                            <td><pre><code>GRANT INSERT ON nombre_base_datos.nombre_tabla TO 'usuario'@'localhost';</code></pre></td>
+                            <td>Autoriza al usuario a insertar nuevos registros en la tabla, sin poder modificar o eliminar datos existentes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modificar registros</strong></td>
+                            <td><pre><code>GRANT UPDATE ON nombre_base_datos.nombre_tabla TO 'usuario'@'localhost';</code></pre></td>
+                            <td>Permite actualizar registros ya almacenados en la tabla.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Eliminar registros</strong></td>
+                            <td><pre><code>GRANT DELETE ON nombre_base_datos.nombre_tabla TO 'usuario'@'localhost';</code></pre></td>
+                            <td>Autoriza la eliminación de registros de la tabla.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Varios privilegios</strong></td>
+                            <td><pre><code>GRANT SELECT, INSERT, UPDATE ON nombre_base_datos.nombre_tabla TO 'usuario'@'localhost';</code></pre></td>
+                            <td>Combina permisos para consultar, insertar y modificar datos (sin eliminar ni alterar la estructura).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Todos los privilegios</strong></td>
+                            <td><pre><code>GRANT ALL PRIVILEGES ON nombre_base_datos.nombre_tabla TO 'usuario'@'localhost';</code></pre></td>
+                            <td>Otorga todos los privilegios sobre la tabla o base de datos; normalmente reservado para administradores.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aplicar cambios</strong></td>
+                            <td><pre><code>FLUSH PRIVILEGES;</code></pre></td>
+                            <td>Actualiza los privilegios cargados por el gestor de base de datos para que los cambios entren en vigor de inmediato.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Los privilegios pueden asignarse a usuarios o a roles. Usar roles facilita la administración de permisos; se crea un rol con los permisos requeridos y luego se asigna ese rol a los usuarios, evitando otorgar privilegios uno por uno.</p>
+                <h3>Creación de roles y usuarios</h3>
+                <ul class="lista">
+                    <li><strong>Creación de rol</strong><code>CREATE ROLE 'nombre_rol';</code></li>
+                    <li><strong>Creación de usuario</strong><code>CREATE USER 'usuario'@'host' IDENTIFIED BY 'contraseña';</code></li>
+                    <li><strong>Asignación de privilegios al rol</strong><code>GRANT SELECT, INSERT, UPDATE ON nombre_base_datos.nombre_tabla TO 'nombre_rol';</code></li>
+                    <li><strong>Asignación del rol a un usuario</strong><code>GRANT nombre_rol TO 'usuario'@'host';</code></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-inst">Instituto Tecnológico</p>
+        <h3>Contacto</h3>
+        <p>Carretera Huejutla – Chalahuiyapa S/N,</p>
+        <p>C.P. 43000, Huejutla de Reyes, Hidalgo, México</p>
+        <p>789 8962088 al 91</p>
+    </footer>
+</body>
+</html>

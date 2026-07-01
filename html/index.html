@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Didáctico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_index.css">
+</head>
+<body>
+    <header>
+        <h1>Material Didáctico</h1>
+        <p class="descripcion">Aprende y conoce más sobre las bases de datos. Apóyate con este material para adentrarte al mundo de las tecnologías y saber administrar el almacenamiento de datos.</p>
+        <p class="indicacion">Selecciona un tema a estudiar</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="grid-3">
+
+                <div class="card" id="c1">
+                    <div class="card-top">
+                        <div class="icon">☁️</div>
+                        <div class="custom-checkbox" id="cb1" onclick="toggleCard('c1','cb1')"></div>
+                    </div>
+                    <span class="tag" class="tamaño-letra">Unidad I</span>
+                    <h2>Introducción a las bases de datos en la nube</h2>
+                    <p>Descubre qué son las bases de datos en la nube, sus principales características, ventajas y aplicaciones.</p>
+                    <div class="card-footer">
+                        <div class="visto-badge">✔ Tema visto</div>
+                        <button onclick="window.location.href='#'" id="btn1">Ver tema →</button>
+                    </div>
+                </div>
+
+                <div class="card" id="c2">
+                    <div class="card-top">
+                        <div class="icon">📖</div>
+                        <div class="custom-checkbox" id="cb2" onclick="toggleCard('c2','cb2')"></div>
+                    </div>
+                    <span class="tag">Unidad I</span>
+                    <h2>Conceptos básicos de bases de datos</h2>
+                    <p>Conoce los fundamentos de las bases de datos, incluyendo conceptos esenciales, su estructura y los elementos que las conforman.</p>
+                    <div class="card-footer">
+                        <div class="visto-badge">✔ Tema visto</div>
+                        <button onclick="window.location.href='#'" id="btn2">Ver tema →</button>
+                    </div>
+                </div>
+
+                <div class="card" id="c3">
+                    <div class="card-top">
+                        <div class="icon">🗄️</div>
+                        <div class="custom-checkbox" id="cb3" onclick="toggleCard('c3','cb3')"></div>
+                    </div>
+                    <span class="tag">Unidad I</span>
+                    <h2>Bases de datos relacionales en la nube</h2>
+                    <p>Aprende a trabajar con sistemas de gestión relacionales: gestores, creación, manipulación y administración.</p>
+                    <div class="card-footer">
+                        <div class="visto-badge">✔ Tema visto</div>
+                        <button onclick="window.location.href='gestores_relacionales.html'" id="btn3">Ver tema →</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid-2">
+
+                <div class="card" id="c4">
+                    <div class="card-top">
+                        <div class="icon">🔀</div>
+                        <div class="custom-checkbox" id="cb4" onclick="toggleCard('c4','cb4')"></div>
+                    </div>
+                    <span class="tag">Unidad II</span>
+                    <h2>Bases de datos no relacionales</h2>
+                    <p>Explora el funcionamiento de las bases de datos NoSQL, sus características, ventajas y tipos de gestores.</p>
+                    <div class="card-footer">
+                        <div class="visto-badge">✔ Tema visto</div>
+                        <button onclick="window.location.href='bd_no_relacionales.html'" id="btn4">Ver tema →</button>
+                    </div>
+                </div>
+
+                <div class="card" id="c5">
+                    <div class="card-top">
+                        <div class="icon">🔌</div>
+                        <div class="custom-checkbox" id="cb5" onclick="toggleCard('c5','cb5')"></div>
+                    </div>
+                    <span class="tag">Unidad III</span>
+                    <h2>Conexión y consumo de bases de datos</h2>
+                    <p>Conoce el proceso de conexión y consumo de datos en la nube para desarrollar soluciones modernas.</p>
+                    <div class="card-footer">
+                        <div class="visto-badge">✔ Tema visto</div>
+                        <button onclick="window.location.href='conexion_bd.html'" id="btn5">Ver tema →</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Contacto</h3>
+        <p>Carretera Huejutla – Chalahuiyapa S/N,</p>
+        <p>C.P. 43000, Huejutla de Reyes,</p>
+        <p>Hidalgo, México</p>
+        <p>789 8962088 al 91</p>
+    </footer>
+
+    <script src="../html/control_index.js"></script>
+
+</body>
+</html>

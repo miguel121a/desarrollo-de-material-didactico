@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de Datos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_temas.css">
+</head>
+<body>
+    <header>
+        <div class="hdr-top">
+            <div class="hdr-left">
+                <span class="unidad-badge">Unidad I</span>
+                <h2>Manipulación de Datos en Bases de Datos Relacionales</h2>
+                <p class="header-description">La manipulación de datos es el proceso mediante el cual una aplicación interactúa con la información almacenada en una base de datos, permitiendo consultarla, insertarla, modificarla o eliminarla a través de comandos estructurados del lenguaje SQL.</p>
+            </div>
+            
+        </div>
+        <nav class="subnav">
+            <ul>
+                <li><a href="gestores_relacionales.html">Gestores</a></li>
+                <li><a href="creacion_relacionales.html">Creación</a></li>
+                <li><a href="manipulacion_relacionales.html" class="activo">Manipulación</a></li>
+                <li><a href="administracion_relacionales.html">Administración</a></li>
+                <li><a href="#">Práctica</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    
+        <main>
+        <a href="index.html" class="back-btn">Volver al inicio</a>
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">1</div>
+                <h2>Manipulación de Datos en la Base de Datos</h2>
+            </div>
+            <div class="temas-body">
+                <p>La manipulación de datos es el proceso de modificar o alterar datos para hacerlos más entendibles y organizados, generar nuevos conocimientos y cumplir con requisitos específicos.</p>
+                <p>El lenguaje de manipulación de datos <strong>(DML)</strong> es un lenguaje de programación que permite organizar y mejorar la legibilidad de los datos. DML ofrece operaciones que posibilitan dichas modificaciones mediante solicitudes del usuario, facilitando así la limpieza y la organización de los datos para su posterior análisis.</p>
+                <p>Los comandos de DML se utilizan para insertar, actualizar, eliminar y recuperar datos de una base de datos. Estos comandos permiten a los usuarios cambiar los datos almacenados en la base de datos sin afectar su esquema ni a la definición de los objetos almacenados en dichas bases.</p>
+                <h3>Comandos de DML</h3>
+                <ul class="lista">
+                    <li>
+                        <strong>SELECT</strong>
+                        <p>Se utiliza para recuperar datos de una o varias tablas de una base de datos. Se puede obtener todos los elementos de una tabla o ciertos registros en base a una condición.</p>
+                        <code>SELECT * FROM nombre_tabla;</code>
+                        <code>SELECT * FROM nombre_tabla WHERE condicion;</code>
+                    </li>
+                    <li>
+                        <strong>INSERT</strong>
+                        <p>Se utiliza para insertar nuevas filas de datos en una tabla. De igual forma se pueden insertar datos en una sola tabla o en varias tablas a la vez.</p>
+                        <code>INSERT INTO nombre_tabla (columna1, columna2) VALUES (valor1, valor2);</code>
+                    </li>
+                    <li>
+                        <strong>UPDATE</strong>
+                        <p>Se utiliza para modificar datos existentes en una tabla.</p>
+                        <code>UPDATE nombre_tabla SET columna1 = valor1 WHERE condicion;</code>
+                    </li>
+                    <li>
+                        <strong>DELETE</strong>
+                        <p>Se emplea para eliminar registros de una tabla.</p>
+                        <code>DELETE FROM nombre_tabla WHERE condicion;</code>
+                    </li>
+                </ul>
+                <p>Todas estas acciones forman parte del CRUD, que son las operaciones esenciales y prácticas para la manipulación de datos básica.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-inst">Instituto Tecnológico</p>
+        <h3>Contacto</h3>
+        <p>Carretera Huejutla – Chalahuiyapa S/N,</p>
+        <p>C.P. 43000, Huejutla de Reyes, Hidalgo, México</p>
+        <p>789 8962088 al 91</p>
+    </footer>
+</body>
+</html>
