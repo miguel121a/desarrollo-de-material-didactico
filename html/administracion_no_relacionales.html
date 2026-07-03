@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Bases de Datos No Relacionales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_temas.css">
+</head>
+<body>
+    <header>
+        <div class="hdr-top">
+            <div class="hdr-left">
+                <span class="unidad-badge">Unidad II</span>
+                <h2>Administración de Bases de Datos No Relacionales</h2>
+                <p class="header-description">Gestión de usuarios, permisos, seguridad y copias de seguridad en sistemas NoSQL en la nube.</p>
+            </div>
+        </div>
+        <nav class="subnav">
+            <ul>
+                <li><a href="bd_no_relacionales.html">Bases No Relacionales</a></li>
+                <li><a href="creacion_no_relacionales.html">Creación</a></li>
+                <li><a href="manipulacion_no_relacionales.html">Manipulación</a></li>
+                <li><a href="administracion_no_relacionales.html" class="activo">Administración</a></li>
+                <li><a href="#">Práctica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">Volver al inicio</a>
+
+        <!-- Sección 1 -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">1</div>
+                <h2>¿Qué es la administración de una base de datos no relacional?</h2>
+            </div>
+            <div class="temas-body">
+                <p>La administración de bases de datos no relacionales comprende todas las tareas necesarias para garantizar el correcto funcionamiento, seguridad, rendimiento y disponibilidad de los datos almacenados en el sistema. Estas responsabilidades recaen en el administrador de la base de datos y son fundamentales para que el sistema opere de forma estable y confiable.</p>
+                <p>A diferencia de las bases de datos relacionales, los sistemas NoSQL suelen desplegarse en entornos distribuidos y en la nube, lo que hace que la administración también contemple aspectos como la replicación de datos, la distribución en múltiples servidores y la tolerancia a fallos. En estos entornos, muchas tareas son asistidas o automatizadas por la plataforma.</p>
+                <ul class="lista">
+                    <li>
+                        <strong>Gestión de usuarios y permisos</strong>
+                        <p>Controlar quién puede acceder a la base de datos y qué operaciones puede realizar cada usuario dentro del sistema.</p>
+                    </li>
+                    <li>
+                        <strong>Seguridad y cifrado</strong>
+                        <p>Proteger los datos tanto en tránsito como en reposo, evitando accesos no autorizados y filtraciones de información.</p>
+                    </li>
+                    <li>
+                        <strong>Copias de seguridad</strong>
+                        <p>Generar respaldos periódicos de la base de datos para poder recuperar la información en caso de fallo o pérdida accidental.</p>
+                    </li>
+                    <li>
+                        <strong>Monitoreo del rendimiento</strong>
+                        <p>Supervisar las métricas del sistema para detectar cuellos de botella, optimizar consultas y garantizar tiempos de respuesta adecuados.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección 2 -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">2</div>
+                <h2>Permisos y niveles de acceso</h2>
+            </div>
+            <div class="temas-body">
+                <p>Los sistemas NoSQL controlan el acceso mediante <strong>roles</strong>. Cada usuario tiene roles asignados que determinan qué operaciones puede realizar dentro del sistema. Este mecanismo permite limitar las acciones de cada usuario según sus responsabilidades, evitando que alguien acceda o modifique información que no le corresponde.</p>
+                <p>Aunque la forma de definir los roles varía según el gestor, la mayoría de los sistemas NoSQL comparten los mismos niveles de acceso de manera conceptual.</p>
+                <ul class="lista">
+                    <li>
+                        <strong>Solo lectura</strong>
+                        <p>El usuario puede consultar datos pero no puede insertar, modificar ni eliminar información. Ideal para reportes o consultas de solo visualización.</p>
+                    </li>
+                    <li>
+                        <strong>Lectura y escritura</strong>
+                        <p>El usuario puede leer, insertar, actualizar y eliminar datos. Es el nivel más común para los usuarios directos de una aplicación.</p>
+                    </li>
+                    <li>
+                        <strong>Administrador de base de datos</strong>
+                        <p>Permite gestionar la estructura del sistema: crear índices, ver estadísticas y administrar colecciones o tablas, sin necesariamente tener acceso a los datos personales.</p>
+                    </li>
+                    <li>
+                        <strong>Administrador de usuarios</strong>
+                        <p>Permite crear, modificar y eliminar otros usuarios y sus roles dentro del sistema. Este rol es clave para controlar quién tiene acceso y con qué privilegios.</p>
+                    </li>
+                    <li>
+                        <strong>Administrador de clúster</strong>
+                        <p>Nivel más alto de acceso. Permite administrar toda la infraestructura del servidor, incluyendo réplicas, distribución de datos y configuraciones globales del sistema.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección 3 -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">3</div>
+                <h2>Seguridad en bases de datos no relacional</h2>
+            </div>
+            <div class="temas-body">
+                <p>La seguridad en sistemas NoSQL abarca varios niveles complementarios que trabajan juntos para proteger los datos almacenados y controlar el acceso al sistema. Dado que estos sistemas suelen estar expuestos en la nube o en redes distribuidas, aplicar medidas de seguridad adecuadas es indispensable.</p>
+                <p>En entornos de nube, los servicios administrados de bases de datos NoSQL suelen incluir estos controles de seguridad activados por defecto, lo que simplifica considerablemente la configuración segura del sistema para los equipos de desarrollo.</p>
+                <ul class="lista">
+                    <li>
+                        <strong>Autenticación</strong>
+                        <p>Verifica la identidad del usuario antes de permitir el acceso al sistema. Puede realizarse mediante usuario y contraseña, certificados digitales o proveedores de identidad externos.</p>
+                    </li>
+                    <li>
+                        <strong>Autorización</strong>
+                        <p>Controla qué acciones puede ejecutar un usuario ya autenticado, limitando sus operaciones según el rol que tenga asignado en el sistema.</p>
+                    </li>
+                    <li>
+                        <strong>Cifrado en tránsito</strong>
+                        <p>Protege los datos mientras viajan entre la aplicación y la base de datos usando protocolos como TLS/SSL, evitando que sean interceptados por terceros en la red.</p>
+                    </li>
+                    <li>
+                        <strong>Cifrado en reposo</strong>
+                        <p>Protege los archivos almacenados en el servidor cifrando el disco o los datos, de modo que no puedan leerse sin la clave de descifrado correspondiente.</p>
+                    </li>
+                    <li>
+                        <strong>Restricción por IP</strong>
+                        <p>Permite configurar listas de direcciones IP autorizadas para conectarse al sistema, bloqueando cualquier acceso externo no permitido desde el inicio.</p>
+                    </li>
+                </ul>
+               
+            </div>
+        </div>
+
+        <!-- Sección 4 -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">4</div>
+                <h2>Copias de seguridad y monitoreo</h2>
+            </div>
+            <div class="temas-body">
+                <p>Los respaldos y el monitoreo son tareas esenciales que garantizan que los datos estén protegidos ante fallos inesperados y que el sistema funcione de manera eficiente en todo momento. En bases de datos no relacionales, estas tareas son especialmente importantes debido a que los sistemas suelen manejar grandes volúmenes de información en entornos distribuidos, donde una falla en un nodo puede afectar la disponibilidad general del servicio.</p>
+                <p>Contar con una estrategia de respaldo bien definida y con herramientas de monitoreo activas permite detectar problemas antes de que afecten a los usuarios finales, reduciendo el tiempo de inactividad y minimizando la pérdida de datos ante cualquier eventualidad.</p>
+
+                <h3>Copias de seguridad</h3>
+                <ul class="lista">
+                    <li>
+                        <strong>Exportación manual</strong>
+                        <p>La mayoría de los gestores NoSQL incluyen herramientas para exportar todos los datos en un archivo que puede almacenarse localmente y restaurarse en caso de pérdida o error.</p>
+                    </li>
+                    <li>
+                        <strong>Snapshots automáticos en la nube</strong>
+                        <p>Los servicios en la nube generan copias de seguridad automáticas y programadas, permitiendo restaurar la base de datos a un punto específico en el tiempo sin intervención manual.</p>
+                    </li>
+                </ul>
+
+                <h3>Monitoreo del rendimiento</h3>
+                <ul class="lista">
+                    <li>
+                        <strong>Estadísticas en tiempo real</strong>
+                        <p>Los gestores NoSQL ofrecen herramientas para visualizar operaciones por segundo, uso de memoria, conexiones activas y estado general del servidor en tiempo real.</p>
+                    </li>
+                    <li>
+                        <strong>Paneles visuales en la nube</strong>
+                        <p>Las plataformas en la nube incluyen dashboards con métricas de CPU, memoria, latencia y rendimiento de consultas, con soporte para configurar alertas automáticas ante anomalías.</p>
+                    </li>
+                    <li>
+                        <strong>Índices</strong>
+                        <p>Crear índices sobre los campos más consultados permite que las búsquedas sean más rápidas y eficientes. Sin índices adecuados, las consultas pueden volverse lentas a medida que el volumen de datos crece.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bases de Datos En la Nube. Desarrollo de Software Multiplataforma.</p>
+    </footer>
+</body>
+</html>

@@ -16,7 +16,6 @@
                 <h2>Bases de datos relacionales en la nube</h2>
                 <p class="header-description">Los gestores de bases de datos relacionales son sistemas que permiten crear, organizar y administrar información estructurada en tablas interconectadas, utilizando el lenguaje SQL para realizar consultas y operaciones sobre los datos almacenados.</p>
             </div>
-            
         </div>
         <nav class="subnav">
             <ul>
@@ -28,11 +27,11 @@
             </ul>
         </nav>
     </header>
-    
 
-    
-        <main>
+    <main>
         <a href="index.html" class="back-btn">Volver al inicio</a>
+
+        <!-- Sección 1 -->
         <div class="temas">
             <div class="temas-header">
                 <div class="temas-num">1</div>
@@ -40,13 +39,13 @@
             </div>
             <div class="temas-body">
                 <p>Una base de datos relacional es una forma de guardar información de manera organizada, usando tablas que están conectadas entre sí. Es similar a tener varias hojas de cálculo donde cada una tiene su propia información, pero todas están relacionadas mediante claves.</p>
-                <p>Por ejemplo, en este proyecto se tiene una tabla de estudiantes y otra de materias. En lugar de escribir el nombre del docente en cada registro, solo se coloca un identificador numérico que hace referencia al docente en su propia tabla. Esto evita la repetición de datos y hace todo más ordenado y eficiente.</p>
+                <p>Por ejemplo, si se tiene una tabla de estudiantes y otra de materias, en lugar de escribir el nombre del docente en cada registro, solo se coloca un identificador numérico que hace referencia al docente en su propia tabla. Esto evita la repetición de datos y hace todo más ordenado y eficiente.</p>
                 <p>Este modelo fue propuesto por Edgar F. Codd en 1970 y sigue siendo el estándar más utilizado en sistemas de información a nivel mundial, tanto en aplicaciones locales como en entornos de nube.</p>
                 <h3>Ventajas de las bases de datos relacionales</h3>
                 <ul class="lista">
                     <li>
                         <strong>Sin redundancia de datos</strong>
-                        <p>La información no se repite entre tablas, lo que ahorra espacio de almacenamiento y facilita el mantenimiento.</p>
+                        <p>La información no se repite entre tablas, lo que ahorra espacio de almacenamiento y facilita el mantenimiento del sistema.</p>
                     </li>
                     <li>
                         <strong>Consultas flexibles</strong>
@@ -64,55 +63,102 @@
             </div>
         </div>
 
+        <!-- Sección 2 -->
         <div class="temas">
             <div class="temas-header">
                 <div class="temas-num">2</div>
-                <h2>Gestores Utilizados</h2>
+                <h2>Gestores de bases de datos relacionales</h2>
             </div>
             <div class="temas-body">
-                <p>Para este proyecto se utilizaron dos tecnologías principales que trabajan en conjunto: MySQL como sistema gestor de base de datos y Hostinger como plataforma de hospedaje en la nube.</p>
+                <p>Un gestor de base de datos relacional, conocido como RDBMS (Relational Database Management System), es el software encargado de crear, administrar y controlar el acceso a la información almacenada en tablas. Existen varios gestores ampliamente utilizados en la industria, cada uno con características particulares que los hacen más adecuados para distintos tipos de proyectos. Actualmente la mayoría de ellos cuentan con versiones administradas en la nube, eliminando la necesidad de instalar y mantener servidores físicos.</p>
+
                 <h3>MySQL</h3>
-                <p>MySQL es uno de los sistemas gestores de bases de datos relacionales más conocidos y utilizados en el mundo. Permite crear, almacenar y organizar información de forma estructurada mediante tablas relacionadas entre sí. Fue desarrollado originalmente por MySQL AB y actualmente es mantenido por Oracle Corporation.</p>
+                <p>Es uno de los gestores más populares del mundo. Es de código abierto, gratuito y compatible con la mayoría de los lenguajes de programación web. Su versión en la nube más utilizada es <strong>Amazon RDS for MySQL</strong> y <strong>Google Cloud SQL</strong>.</p>
                 <ul class="lista">
                     <li>
-                        <strong>Gratuito y de código abierto</strong>
-                        <p>No requiere licencias de pago para su uso en proyectos educativos o de desarrollo, lo que lo hace ideal para este tipo de proyectos.</p>
-                    </li>
-                    <li>
-                        <strong>Compatible con phpMyAdmin</strong>
-                        <p>Funciona perfectamente con phpMyAdmin, la herramienta visual utilizada para crear y administrar las tablas de forma gráfica sin necesidad de escribir comandos manualmente.</p>
-                    </li>
-                    <li>
-                        <strong>Amplia compatibilidad</strong>
-                        <p>Es compatible con la mayoría de los lenguajes de programación web como PHP, Python y JavaScript, así como con plataformas de hospedaje como Hostinger.</p>
+                        <strong>Código abierto y gratuito</strong>
+                        <p>No requiere licencias de pago, lo que lo hace accesible para cualquier tipo de proyecto sin costo adicional.</p>
                     </li>
                     <li>
                         <strong>Alto rendimiento</strong>
-                        <p>Está optimizado para manejar grandes volúmenes de datos con rapidez, siendo confiable tanto en entornos locales como en la nube.</p>
+                        <p>Optimizado para manejar grandes volúmenes de datos con rapidez, siendo confiable tanto en entornos locales como en la nube.</p>
                     </li>
                 </ul>
-                <h3>Hostinger</h3>
-                <p>Hostinger es un servicio de hospedaje web que también incluye bases de datos MySQL. Está pensado principalmente para alojar páginas web junto con su base de datos, aunque también puede utilizarse únicamente para gestión de datos en la nube.</p>
+
+                <h3>PostgreSQL</h3>
+                <p>Gestor avanzado de código abierto que se distingue por su cumplimiento estricto de los estándares SQL y su soporte para tipos de datos complejos. Su versión en la nube más utilizada es <strong>Amazon RDS for PostgreSQL</strong> y <strong>Google Cloud SQL</strong>.</p>
                 <ul class="lista">
                     <li>
-                        <strong>phpMyAdmin integrado</strong>
-                        <p>Incluye phpMyAdmin de forma nativa, lo que facilita enormemente la importación, visualización y gestión de la base de datos directamente desde el panel de control.</p>
+                        <strong>Soporte avanzado de SQL</strong>
+                        <p>Implementa prácticamente todos los estándares SQL modernos, incluyendo subconsultas, vistas y procedimientos almacenados.</p>
                     </li>
                     <li>
-                        <strong>Proceso de importación sencillo</strong>
-                        <p>El procedimiento para subir la base de datos a Hostinger es idéntico al proceso local, lo que reduce la curva de aprendizaje y evita configuraciones complicadas.</p>
+                        <strong>Extensible</strong>
+                        <p>Permite crear tipos de datos y funciones personalizadas, adaptándose a necesidades específicas de cada proyecto.</p>
+                    </li>
+                </ul>
+
+                <h3>Microsoft SQL Server</h3>
+                <p>Gestor desarrollado por Microsoft, ampliamente utilizado en entornos empresariales. Su versión en la nube es <strong>Azure SQL Database</strong>, con escalabilidad automática y alta disponibilidad integrada.</p>
+                <ul class="lista">
+                    <li>
+                        <strong>Integración con el ecosistema Microsoft</strong>
+                        <p>Se integra fácilmente con herramientas como Azure, Power BI y Visual Studio para soluciones empresariales completas.</p>
                     </li>
                     <li>
-                        <strong>Confiabilidad y disponibilidad</strong>
-                        <p>Ofrece alta disponibilidad del servicio con copias de seguridad automáticas, lo que protege los datos ante posibles fallos o pérdidas accidentales.</p>
+                        <strong>Herramientas visuales incluidas</strong>
+                        <p>Incluye SQL Server Management Studio (SSMS), una interfaz gráfica completa para administrar bases de datos sin escribir comandos manualmente.</p>
+                    </li>
+                </ul>
+
+                <h3>Oracle Database</h3>
+                <p>Uno de los gestores más robustos del mercado, diseñado para grandes empresas que manejan enormes volúmenes de información. Su versión en la nube es <strong>Oracle Cloud Database</strong>, preferida en sectores como la banca y las telecomunicaciones.</p>
+                <ul class="lista">
+                    <li>
+                        <strong>Alta disponibilidad</strong>
+                        <p>Ofrece mecanismos avanzados de recuperación ante fallos para garantizar que el sistema esté siempre operativo.</p>
                     </li>
                     <li>
-                        <strong>Panel de control intuitivo</strong>
-                        <p>Su interfaz de administración (hPanel) es clara y fácil de navegar, permitiendo gestionar dominios, bases de datos y archivos desde un solo lugar.</p>
+                        <strong>Seguridad empresarial</strong>
+                        <p>Incluye funciones avanzadas de cifrado y auditoría diseñadas para entornos con requisitos de seguridad muy estrictos.</p>
                     </li>
                 </ul>
             </div>
         </div>
+
+        <!-- Sección 3 -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">3</div>
+                <h2>Ventajas de usar un gestor relacional en la nube</h2>
+            </div>
+            <div class="temas-body">
+                <p>Llevar una base de datos relacional a la nube ofrece beneficios importantes frente a los entornos locales tradicionales. Las plataformas en la nube se encargan de tareas como la configuración del servidor, las actualizaciones automáticas y los respaldos periódicos, permitiendo que el equipo de desarrollo se concentre en la aplicación en lugar de en la infraestructura.</p>
+                <ul class="lista">
+                    <li>
+                        <strong>Disponibilidad continua</strong>
+                        <p>Los servicios en la nube garantizan que la base de datos esté accesible en todo momento desde cualquier lugar, sin depender de un servidor físico que pueda fallar o apagarse.</p>
+                    </li>
+                    <li>
+                        <strong>Escalabilidad</strong>
+                        <p>Es posible aumentar o reducir los recursos del servidor según la demanda del sistema, sin necesidad de adquirir hardware adicional ni interrumpir el servicio.</p>
+                    </li>
+                    <li>
+                        <strong>Copias de seguridad automáticas</strong>
+                        <p>La mayoría de los servicios en la nube generan respaldos periódicos de forma automática, reduciendo el riesgo de pérdida de información ante fallos inesperados.</p>
+                    </li>
+                    <li>
+                        <strong>Seguridad administrada</strong>
+                        <p>Las plataformas en la nube incluyen cifrado de datos, control de acceso por IP y autenticación avanzada configurados por defecto, simplificando la protección del sistema.</p>
+                    </li>
+                    <li>
+                        <strong>Reducción de costos de infraestructura</strong>
+                        <p>Al no requerir servidores físicos propios, se eliminan los costos de mantenimiento de hardware, electricidad y espacio físico asociados a los entornos locales.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </main>
 
     <footer>

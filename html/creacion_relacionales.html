@@ -14,94 +14,119 @@
             <div class="hdr-left">
                 <span class="unidad-badge">Unidad I</span>
                 <h2>Creación de Base de Datos Relacional</h2>
-                <p class="header-description">Crear una base de datos relacional consiste en definir la estructura de tablas, sus atributos y las relaciones entre ellas, para luego alojarla en un servidor en la nube donde pueda ser consultada y administrada desde cualquier aplicación conectada.</p>
+                <p class="header-description">Las bases de datos relacionales en la nube son sistemas de gestión de bases de datos que se ejecutan en entornos de computación en la nube, ofreciendo ventajas como escalabilidad, disponibilidad y coste reducido.</p>
             </div>
-            
         </div>
         <nav class="subnav">
             <ul>
                 <li><a href="gestores_relacionales.html">Gestores</a></li>
                 <li><a href="creacion_relacionales.html" class="activo">Creación</a></li>
-                <li><a href="manipulacion_relacionales.html">Manipulación</a></li>
+                <li><a href="manipulacion_relacionales.html" >Manipulación</a></li>
                 <li><a href="administracion_relacionales.html">Administración</a></li>
                 <li><a href="#">Práctica</a></li>
             </ul>
         </nav>
     </header>
-    
 
-    
-        <main>
+    <main>
         <a href="index.html" class="back-btn">Volver al inicio</a>
+        <!-- Sección 1: Creación -->
         <div class="temas">
             <div class="temas-header">
                 <div class="temas-num">1</div>
-                <h2>Creación de la Base de Datos</h2>
+                <h2>¿Cómo se crea una base de datos relacional?</h2>
             </div>
             <div class="temas-body">
-                <p>Para el desarrollo del proyecto se creó una base de datos relacional denominada <strong>u941347256_proyectEstadia</strong>, cuyo objetivo es almacenar y organizar la información académica de los estudiantes de manera eficiente.</p>
-                <p>El diseño se realizó siguiendo el modelo relacional, el cual permite que la información se distribuya en diferentes tablas relacionadas entre sí mediante claves primarias y claves foráneas. Esto ayuda a evitar la duplicidad de datos, facilita las consultas y mejora la integridad de la información almacenada.</p>
-                <p>Antes de crear la base de datos se identificaron las entidades principales involucradas en el sistema. Posteriormente se definieron los atributos de cada entidad y las relaciones existentes entre ellas.</p>
-                <h3>Entidades identificadas</h3>
+                <p>Una base de datos relacional se diseña antes de ser implementada. El proceso comienza identificando las entidades del sistema, sus atributos y las relaciones entre ellas. Este diseño se representa mediante un modelo entidad-relación (ER) que sirve como guía para construir las tablas.</p>
+                <p>El modelo relacional distribuye la información en tablas conectadas mediante claves primarias y claves foráneas, evitando la duplicidad de datos, facilitando las consultas y garantizando la integridad de la información.</p>
+
+                <h3>Etapas del diseño</h3>
                 <ul class="lista">
                     <li>
-                        <strong>Estudiantes</strong>
-                        <p>Entidad central del sistema. Almacena datos personales como nombre, CURP, fecha de nacimiento, dirección y teléfono de cada alumno registrado.</p>
+                        <strong>1. Identificar las entidades</strong>
+                        <p>Una entidad representa un objeto o concepto del mundo real sobre el que se desea almacenar información, por ejemplo: <strong>Estudiantes, Docentes, Materias o Grupos.</strong></p>
                     </li>
                     <li>
-                        <strong>Docentes</strong>
-                        <p>Registra la información del personal docente: nombre, apellidos, clave de trabajador, correo electrónico y teléfono de contacto.</p>
+                        <strong>2. Definir los atributos</strong>
+                        <p>Cada entidad tiene atributos que describen sus características. Por ejemplo: <strong>La entidad Estudiante puede tener atributos como nombre, fecha de nacimiento, dirección y teléfono.</strong></p> 
                     </li>
                     <li>
-                        <strong>Materias</strong>
-                        <p>Contiene las materias impartidas en la institución, vinculadas a su docente correspondiente mediante una clave foránea.</p>
+                        <strong>3. Establecer las relaciones</strong>
+                        <p>Se definen las conexiones entre entidades. Por ejemplo: <strong>Un Estudiante pertenece a un Grupo, y una Materia es impartida por un Docente. Estas relaciones se implementan con claves foráneas.</strong></p>
                     </li>
                     <li>
-                        <strong>Grupos</strong>
-                        <p>Define los grupos escolares disponibles, organizados por grado y letra identificadora, a los que se asignan los estudiantes.</p>
+                        <strong>4. Crear las tablas en el gestor</strong>
+                        <p>Con el diseño definido, se crean las tablas en el sistema gestor (como MySQL) usando SQL o herramientas visuales como phpMyAdmin, configurando los campos, tipos de datos y restricciones necesarias.</p>
                     </li>
                 </ul>
-                <h3>Herramientas utilizadas</h3>
-                <p>La creación de la base de datos se llevó a cabo utilizando <strong>MySQL</strong> a través de <strong>phpMyAdmin</strong>, donde se generaron las tablas necesarias, se configuraron los campos correspondientes y se establecieron las relaciones para garantizar una correcta organización de los datos.</p>
             </div>
         </div>
 
+        <!-- Sección 2: Proceso de subida -->
         <div class="temas">
             <div class="temas-header">
                 <div class="temas-num">2</div>
-                <h2>Proceso de Subida a la Nube</h2>
+                <h2>Migración de una Base de Datos a la Nube</h2>
             </div>
             <div class="temas-body">
-                <p>Una vez terminada la base de datos en entorno local, se realizó el proceso de migración hacia Hostinger para que el proyecto pudiera funcionar en la nube. El proceso se dividió en dos fases principales.</p>
-                <h3>Fase 1 — Exportación desde phpMyAdmin local</h3>
-                <p>Primero se exportó la base de datos desde phpMyAdmin instalado de manera local con XAMPP. Se utilizó la opción de exportación en formato SQL, lo que generó un archivo con todas las instrucciones necesarias para recrear las tablas y los datos en cualquier otro servidor.</p>
+                <p>Una vez creada y probada la base de datos en un entorno local, el siguiente paso es migrarla a un servidor en la nube para que pueda ser accedida desde cualquier lugar. Este proceso se divide en dos fases: exportación e importación.</p>
+
+                <h3>Fase 1 — Exportar la base de datos local</h3>
+                <p>La exportación consiste en generar un archivo SQL que contiene todas las instrucciones necesarias para recrear la estructura y los datos de la base de datos en otro servidor. Desde phpMyAdmin este proceso es sencillo y no requiere escribir código.</p>
                 <ul class="lista">
-                    <li><strong>Paso 1</strong><p>Abrir phpMyAdmin desde el panel de control de XAMPP.</p></li>
-                    <li><strong>Paso 2</strong><p>Seleccionar la base de datos <strong>u941347256_proyectEstadia</strong> en el panel izquierdo.</p></li>
-                    <li><strong>Paso 3</strong><p>Ir a la pestaña Exportar en la barra de navegación superior.</p></li>
-                    <li><strong>Paso 4</strong><p>Elegir el método de exportación Rápido y el formato SQL.</p></li>
-                    <li><strong>Paso 5</strong><p>Hacer clic en Exportar y guardar el archivo .sql generado en el equipo.</p></li>
+                    <li>
+                        <strong>Paso 1</strong>
+                        <p>Abrir phpMyAdmin desde el entorno local (por ejemplo, mediante XAMPP o WAMP).</p>
+                    </li>
+                    <li>
+                        <strong>Paso 2</strong>
+                        <p>Seleccionar la base de datos que se desea exportar en el panel izquierdo.</p>
+                    </li>
+                    <li>
+                        <strong>Paso 3</strong>
+                        <p>Ir a la pestaña <strong>Exportar</strong> en la barra de navegación superior.</p>
+                    </li>
+                    <li>
+                        <strong>Paso 4</strong>
+                        <p>Seleccionar el método <strong>Rápido</strong> y el formato <strong>SQL</strong>, luego hacer clic en Exportar.</p>
+                    </li>
+                    <li>
+                        <strong>Paso 5</strong>
+                        <p>Guardar el archivo <strong>.sql</strong> generado en el equipo. Este archivo será el que se suba al servidor en la nube.</p>
+                    </li>
                 </ul>
-                <h3>Fase 2 — Importación en Hostinger</h3>
-                <p>En Hostinger el proceso fue mucho más sencillo porque la plataforma tiene phpMyAdmin integrado. Solo se creó la base de datos desde el panel de control, se abrió phpMyAdmin, se seleccionó la base de datos y se importó el archivo SQL directamente.</p>
+
+                <h3>Fase 2 — Importar la base de datos en la nube</h3>
+                <p>La importación consiste en subir el archivo SQL al servidor remoto. La mayoría de plataformas de hospedaje en la nube incluyen phpMyAdmin integrado, lo que hace que este proceso sea prácticamente idéntico al entorno local.</p>
                 <ul class="lista">
-                    <li><strong>Paso 1</strong><p>Ingresar al panel de control de Hostinger y crear una nueva base de datos MySQL.</p></li>
-                    <li><strong>Paso 2</strong><p>Acceder a phpMyAdmin desde el apartado de bases de datos en hPanel.</p></li>
-                    <li><strong>Paso 3</strong><p>Seleccionar la base de datos recién creada en el panel izquierdo.</p></li>
-                    <li><strong>Paso 4</strong><p>Ir a la pestaña Importar y seleccionar el archivo .sql exportado previamente.</p></li>
-                    <li><strong>Paso 5</strong><p>Hacer clic en Importar y esperar a que el proceso finalice correctamente.</p></li>
+                    <li>
+                        <strong>Paso 1</strong>
+                        <p>Ingresar al panel de control del proveedor de hospedaje y crear una nueva base de datos MySQL.</p>
+                    </li>
+                    <li>
+                        <strong>Paso 2</strong>
+                        <p>Acceder a phpMyAdmin desde el apartado de bases de datos del panel.</p>
+                    </li>
+                    <li>
+                        <strong>Paso 3</strong>
+                        <p>Seleccionar la base de datos recién creada en el panel izquierdo.</p>
+                    </li>
+                    <li>
+                        <strong>Paso 4</strong>
+                        <p>Ir a la pestaña <strong>Importar</strong> y seleccionar el archivo <strong>.sql</strong> exportado previamente.</p>
+                    </li>
+                    <li>
+                        <strong>Paso 5</strong>
+                        <p>Hacer clic en <strong>Importar</strong> y esperar a que el proceso finalice. Si no hay errores, la base de datos quedará disponible en la nube con todas sus tablas y datos.</p>
+                    </li>
                 </ul>
-                <p>Al finalizar, la importación se completó con éxito sin ningún error, quedando la base de datos disponible en la nube con todas sus tablas y datos correctamente configurados.</p>
             </div>
         </div>
+
     </main>
 
     <footer>
-        <p class="footer-inst">Instituto Tecnológico</p>
-        <h3>Contacto</h3>
-        <p>Carretera Huejutla – Chalahuiyapa S/N,</p>
-        <p>C.P. 43000, Huejutla de Reyes, Hidalgo, México</p>
-        <p>789 8962088 al 91</p>
+        <p>&copy; 2026 Bases de Datos En la Nube. Desarrollo de Software Multiplataforma.</p>
     </footer>
 </body>
 </html>

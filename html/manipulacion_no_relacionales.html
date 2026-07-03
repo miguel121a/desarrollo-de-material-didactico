@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de Datos No Relacionales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_temas.css">
+</head>
+<body>
+    <header>
+        <div class="hdr-top">
+            <div class="hdr-left">
+                <span class="unidad-badge">Unidad II</span>
+                <h2>Manipulación de Datos No Relacionales</h2>
+                <p class="header-description">Métodos y sintaxis para insertar, consultar, actualizar y eliminar información en bases de datos no relacionales.</p>
+            </div>
+        </div>
+        <nav class="subnav">
+            <ul>
+                <li><a href="bd_no_relacionales.html">Bases No Relacionales</a></li>
+                <li><a href="creacion_no_relacionales.html">Creación</a></li>
+                <li><a href="manipulacion_no_relacionales.html" class="activo">Manipulación</a></li>
+                <li><a href="administracion_no_relacionales.html">Administración</a></li>
+                <li><a href="#">Práctica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">Volver al inicio</a>
+
+        <!-- Sección 1 -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">1</div>
+                <h2>¿Qué es la manipulación de datos en NoSQL?</h2>
+            </div>
+            <div class="temas-body">
+                <p>La manipulación de datos en bases de datos no relacionales se refiere al conjunto de operaciones que permiten insertar, consultar, actualizar y eliminar información almacenada en el sistema. A diferencia de las bases de datos relacionales, donde existe un lenguaje estándar universal como SQL, en los sistemas NoSQL cada gestor puede tener su propia sintaxis y métodos para realizar estas operaciones.</p>
+                <p>Sin embargo, todos comparten la misma lógica fundamental: las cuatro operaciones básicas conocidas como <strong>CRUD</strong> (Create, Read, Update, Delete), que representan las acciones esenciales para gestionar cualquier tipo de dato dentro del sistema.</p>
+                <p>En los sistemas NoSQL los datos no se organizan en tablas con filas y columnas, sino en estructuras más flexibles como documentos, grafos o pares clave-valor. Esto permite que cada registro pueda tener una estructura diferente sin necesidad de modificar el esquema general de la base de datos.</p>
+            </div>
+        </div>
+
+            <!-- Sección 2 -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">2</div>
+                <h2>Operaciones CRUD</h2>
+            </div>
+            <div class="temas-body">
+                <p>Las operaciones CRUD son las acciones fundamentales para gestionar los datos almacenados en cualquier base de datos, tanto relacional como no relacional. En los sistemas NoSQL estas operaciones se aplican sobre documentos, nodos, pares clave-valor u otras estructuras según el tipo de gestor utilizado.</p>
+                <ul class="lista">
+                    <li>
+                        <strong>CREATE — Insertar datos</strong>
+                        <p>Permite agregar nuevos registros al sistema. En la mayoría de los gestores NoSQL se puede insertar un solo registro o varios al mismo tiempo en una única operación.</p>
+                        <code>db.coleccion.insertOne({ campo: "valor", campo2: "valor2" })</code>
+                    </li>
+                    <li>
+                        <strong>READ — Consultar datos</strong>
+                        <p>Permite recuperar información almacenada aplicando filtros y condiciones. Se puede obtener un único registro o un conjunto de registros que cumplan con los criterios definidos.</p>
+                        <code>db.coleccion.find({ campo: "valor" })</code>
+                    </li>
+                    <li>
+                        <strong>UPDATE — Actualizar datos</strong>
+                        <p>Permite modificar registros existentes sin necesidad de eliminarlos y volver a crearlos. Se puede actualizar un registro específico o varios al mismo tiempo según la condición indicada.</p>
+                        <code>db.coleccion.updateOne({ campo: "valor" }, { $set: { campo2: "nuevo_valor" } })</code>
+                    </li>
+                    <li>
+                        <strong>DELETE — Eliminar datos</strong>
+                        <p>Permite borrar registros del sistema de forma permanente. Al igual que en la actualización, se puede eliminar un único registro o un conjunto de ellos según el filtro aplicado.</p>
+                        <code>db.coleccion.deleteOne({ campo: "valor" })</code>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección 3 -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">3</div>
+                <h2>Diferencias con la manipulación en SQL</h2>
+            </div>
+            <div class="temas-body">
+                <p>Aunque la lógica CRUD es la misma en ambos modelos, la forma en que se manipulan los datos en sistemas NoSQL presenta diferencias importantes respecto a las bases de datos relacionales que es necesario comprender.</p>
+                <ul class="lista">
+                    <li>
+                        <strong>Sin esquema fijo</strong>
+                        <p>En SQL cada tabla tiene columnas definidas y todos los registros deben seguir esa estructura. En NoSQL cada registro puede tener campos distintos, lo que permite mayor flexibilidad al agregar o modificar datos sin afectar al resto del sistema.</p>
+                    </li>
+                    <li>
+                        <strong>Sin necesidad de JOINs</strong>
+                        <p>En SQL para relacionar datos de varias tablas se utilizan JOINs. En NoSQL es común almacenar datos relacionados dentro del mismo registro mediante estructuras anidadas, evitando consultas complejas entre colecciones.</p>
+                    </li>
+                    <li>
+                        <strong>Mayor rendimiento en operaciones masivas</strong>
+                        <p>Los sistemas NoSQL están optimizados para manejar grandes volúmenes de operaciones de lectura y escritura de forma simultánea, superando en rendimiento a las bases relacionales en escenarios de alta concurrencia.</p>
+                    </li>
+                    <li>
+                        <strong>Sintaxis propia de cada gestor</strong>
+                        <p>A diferencia de SQL, donde el lenguaje es estándar entre diferentes gestores, en NoSQL cada sistema tiene su propia forma de escribir las operaciones, aunque la lógica detrás de ellas sea la misma.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bases de Datos En la Nube. Desarrollo de Software Multiplataforma.</p>
+    </footer>
+</body>
+</html>
