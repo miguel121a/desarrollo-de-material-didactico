@@ -167,7 +167,7 @@ main {
 }
 
 .temas-header h2 {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   color: #1e3a8a;
   margin: 0;
@@ -190,10 +190,11 @@ main {
   font-weight: 700;
   color: #1e3a8a;
   margin: 18px 0 10px;
+  font-size: 16px;
 }
 
 .temas-body p {
-  font-size: 13.5px;
+  font-size: 14.5px;
   color: #374151;
   margin-bottom: 12px;
 }
@@ -216,14 +217,14 @@ main {
 .lista li strong {
   display: block;
   color: #1a3a6b;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
 .lista li p {
   color: #4b5563;
-  font-size: 12.5px;
+  font-size: 13.5px;
   margin: 4px 0 0;
   line-height: 1.6;
 }

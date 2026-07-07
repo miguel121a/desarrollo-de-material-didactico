@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica — Bases de Datos No Relacionales</title>
+    <link rel="stylesheet" href="../css/style_temas.css">
+    <link rel="stylesheet" href="../css/style_practica.css">
+</head>
+<body>
+    <header>
+        <div class="hdr-top">
+            <div class="hdr-left">
+                <span class="unidad-badge">Práctica — Unidad II</span>
+                <h2>Cuestionario — Bases de Datos No Relacionales</h2>
+                <p class="header-description">Pon a prueba lo que aprendiste sobre bases de datos NoSQL: sus tipos, creación, manipulación y administración. Algunas actividades requieren arrastrar elementos, lee bien las instrucciones de cada pregunta antes de responder.</p>
+            </div>
+        </div>
+        <nav class="subnav">
+            <ul>
+                <li><a href="bd_no_relacionales.html">Bases No Relacionales</a></li>
+                <li><a href="creacion_no_relacionales.html">Creación</a></li>
+                <li><a href="manipulacion_no_relacionales.html">Manipulación</a></li>
+                <li><a href="administracion_no_relacionales.html">Administración</a></li>
+                <li><a href="practica_no_relacionales.html" class="activo">Práctica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">Volver al inicio</a>
+
+        <div class="practica-intro">
+            <div>
+                <h3>Instrucciones</h3>
+                <p>Lee cada pregunta con atención. Las preguntas de opción múltiple requieren seleccionar una respuesta. Las actividades de arrastre requieren identificar y colocar únicamente los elementos correctos en la zona indicada. Al finalizar haz clic en <strong>Revisar respuestas</strong>.</p>
+            </div>
+        </div>
+
+        <form id="frm-practica2">
+
+            <!-- Pregunta 1 -->
+            <div id="pregunta-1" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">1</div>
+                    <span class="pregunta-tema">¿Cómo almacenan la información las bases de datos no relacionales a diferencia de las relacionales?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p1" value="A"> A) En tablas con filas y columnas fijas.</label></li>
+                        <li><label><input type="radio" name="p1" value="B"> B) En estructuras flexibles como documentos, grafos o pares clave-valor.</label></li>
+                        <li><label><input type="radio" name="p1" value="C"> C) En archivos de texto plano sin ninguna organización.</label></li>
+                        <li><label><input type="radio" name="p1" value="D"> D) En hojas de cálculo conectadas entre sí.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p1"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div id="pregunta-2" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">2</div>
+                    <span class="pregunta-tema">¿Para qué tipo de aplicaciones son especialmente adecuadas las bases de datos NoSQL?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p2" value="A"> A) Aplicaciones que manejan pocos datos con estructura fija.</label></li>
+                        <li><label><input type="radio" name="p2" value="B"> B) Aplicaciones que solo almacenan imágenes y videos.</label></li>
+                        <li><label><input type="radio" name="p2" value="C"> C) Aplicaciones que requieren almacenar grandes volúmenes de información con estructuras variables.</label></li>
+                        <li><label><input type="radio" name="p2" value="D"> D) Aplicaciones que no necesitan hacer búsquedas sobre los datos.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p2"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 — Drag and Drop: Configurar acceso seguro -->
+            <div id="pregunta-3" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">3</div>
+                    <span class="pregunta-tema">Configurar acceso seguro</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <p class="pregunta-texto">Un desarrollador acaba de crear un clúster en MongoDB Atlas y necesita dejarlo listo para que su aplicación pueda conectarse de forma segura. Arrastra únicamente los pasos necesarios para lograrlo a la zona de respuesta.</p>
+                    <div class="drag-layout">
+                        <div class="drag-source-wrap">
+                            <p class="drag-label">Opciones disponibles</p>
+                            <div class="drag-source" id="drag-source-3">
+                                <div class="drag-item" id="d3-a" draggable="true">Crear un usuario de base de datos con usuario y contraseña</div>
+                                <div class="drag-item" id="d3-b" draggable="true">Exportar todos los documentos a un archivo JSON antes de conectarse</div>
+                                <div class="drag-item" id="d3-c" draggable="true">Agregar la dirección IP de la aplicación a la lista de acceso</div>
+                                <div class="drag-item" id="d3-d" draggable="true">Asignar el rol de administrador de clúster a todos los usuarios de la aplicación</div>
+                                <div class="drag-item" id="d3-e" draggable="true">Obtener la cadena de conexión desde el panel del clúster</div>
+                                <div class="drag-item" id="d3-f" draggable="true">Crear un índice en cada campo de la colección para mejorar la conexión</div>
+                                <div class="drag-item" id="d3-g" draggable="true">Verificar que el clúster tenga habilitado el cifrado en tránsito</div>
+                                <div class="drag-item" id="d3-h" draggable="true">Configurar un snapshot manual justo antes de realizar la primera conexión</div>
+                            </div>
+                        </div>
+                        <div class="drag-targets-wrap">
+                            <p class="drag-label">Pasos necesarios (arrastra 4)</p>
+                            <div class="drop-zone-multi" id="drop-zone-3"></div>
+                        </div>
+                    </div>
+                    <div class="feedback" id="feedback-p3"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div id="pregunta-4" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">4</div>
+                    <span class="pregunta-tema">¿Por qué algunos gestores NoSQL como MongoDB crean la base de datos automáticamente al insertar datos?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <p class="pregunta-texto"></p>
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p4" value="A"> A) Porque no permiten crear bases de datos de forma manual.</label></li>
+                        <li><label><input type="radio" name="p4" value="B"> B) Porque no requieren un esquema fijo definido previamente, por lo que pueden generarse al primer uso.</label></li>
+                        <li><label><input type="radio" name="p4" value="C"> C) Porque es obligatorio insertar datos antes de crear la estructura.</label></li>
+                        <li><label><input type="radio" name="p4" value="D"> D) Porque es la única forma disponible en sistemas en la nube.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p4"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div id="pregunta-5" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">5</div>
+                    <span class="pregunta-tema">¿Cuál es la principal diferencia entre manipular datos en SQL y en NoSQL?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <p class="pregunta-texto"></p>
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p5" value="A"> A) En NoSQL no es posible actualizar ni eliminar datos.</label></li>
+                        <li><label><input type="radio" name="p5" value="B"> B) En SQL los datos no tienen ninguna estructura definida.</label></li>
+                        <li><label><input type="radio" name="p5" value="C"> C) En NoSQL se usan los mismos comandos que en SQL sin ninguna diferencia.</label></li>
+                        <li><label><input type="radio" name="p5" value="D"> D) En NoSQL cada registro puede tener campos distintos y cada gestor tiene su propia sintaxis.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p5"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div id="pregunta-6" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">6</div>
+                    <span class="pregunta-tema">¿Qué ventaja ofrece almacenar datos relacionados dentro del mismo registro en NoSQL?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p6" value="A"> A) Que los datos ocupan menos espacio en el servidor.</label></li>
+                        <li><label><input type="radio" name="p6" value="B"> B) Que se evitan consultas complejas entre colecciones, como los JOINs en SQL.</label></li>
+                        <li><label><input type="radio" name="p6" value="C"> C) Que los datos no pueden ser modificados una vez guardados.</label></li>
+                        <li><label><input type="radio" name="p6" value="D"> D) Que la base de datos se vuelve compatible con SQL automáticamente.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p6"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 7 — Drag and Drop: Identificar operaciones CRUD -->
+            <div id="pregunta-7" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">7</div>
+                    <span class="pregunta-tema">Identificar operaciones CRUD</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <p class="pregunta-texto">Una aplicación escolar necesita gestionar la información de sus estudiantes. Lee cada tarea y arrastra únicamente las que corresponden a operaciones CRUD sobre los datos a la zona de respuesta.</p>
+                    <div class="drag-layout">
+                        <div class="drag-source-wrap">
+                            <p class="drag-label">Opciones disponibles</p>
+                            <div class="drag-source" id="drag-source-7">
+                                <div class="drag-item" id="d7-a" draggable="true">Registrar un nuevo estudiante en la colección con sus datos personales</div>
+                                <div class="drag-item" id="d7-b" draggable="true">Crear un índice sobre el campo de matrícula para agilizar las búsquedas</div>
+                                <div class="drag-item" id="d7-c" draggable="true">Consultar todos los estudiantes que pertenecen a un grupo específico</div>
+                                <div class="drag-item" id="d7-d" draggable="true">Asignar el rol de solo lectura al docente que consulta los reportes</div>
+                                <div class="drag-item" id="d7-e" draggable="true">Corregir la calificación de un estudiante que fue registrada incorrectamente</div>
+                                <div class="drag-item" id="d7-f" draggable="true">Programar un snapshot automático al finalizar cada periodo escolar</div>
+                                <div class="drag-item" id="d7-g" draggable="true">Dar de baja a un estudiante eliminando su registro de la colección</div>
+                            </div>
+                        </div>
+                        <div class="drag-targets-wrap">
+                            <p class="drag-label">Operaciones CRUD (arrastra 4)</p>
+                            <div class="drop-zone-multi" id="drop-zone-7"></div>
+                        </div>
+                    </div>
+                    <div class="feedback" id="feedback-p7"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 8 -->
+            <div id="pregunta-8" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">8</div>
+                    <span class="pregunta-tema">¿Qué diferencia hay entre autenticación y autorización en seguridad de bases de datos?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p8" value="A"> A) Son lo mismo, solo cambia el nombre según el gestor.</label></li>
+                        <li><label><input type="radio" name="p8" value="B"> B) La autorización verifica la identidad y la autenticación controla los permisos.</label></li>
+                        <li><label><input type="radio" name="p8" value="C"> C) La autenticación verifica quién es el usuario y la autorización controla qué puede hacer.</label></li>
+                        <li><label><input type="radio" name="p8" value="D"> D) Ninguna de las dos aplica en bases de datos no relacionales.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p8"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 9 -->
+            <div id="pregunta-9" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">9</div>
+                    <span class="pregunta-tema">¿Para qué sirven los snapshots automáticos en la nube?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p9" value="A"> A) Para mejorar la velocidad de las consultas en tiempo real.</label></li>
+                        <li><label><input type="radio" name="p9" value="B"> B) Para crear nuevos usuarios en el sistema automáticamente.</label></li>
+                        <li><label><input type="radio" name="p9" value="C"> C) Para generar copias de seguridad programadas que permiten restaurar la base de datos a un punto anterior.</label></li>
+                        <li><label><input type="radio" name="p9" value="D"> D) Para cifrar los datos almacenados en el servidor.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p9"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 10 -->
+            <div id="pregunta-10" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">10</div>
+                    <span class="pregunta-tema">¿Qué tipo de gestor NoSQL almacena cada dato mediante una clave única asociada a un valor?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p10" value="A"> A) Orientado a documentos.</label></li>
+                        <li><label><input type="radio" name="p10" value="B"> B) Orientado a grafos.</label></li>
+                        <li><label><input type="radio" name="p10" value="C"> C) Orientado a columnas.</label></li>
+                        <li><label><input type="radio" name="p10" value="D"> D) Clave-valor.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p10"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 11 -->
+            <div id="pregunta-11" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">11</div>
+                    <span class="pregunta-tema">En MongoDB Atlas, ¿para qué sirve configurar el acceso a la red antes de conectarse?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p11" value="A"> A) Para aumentar la velocidad de las consultas.</label></li>
+                        <li><label><input type="radio" name="p11" value="B"> B) Para elegir el tipo de datos que se almacenarán.</label></li>
+                        <li><label><input type="radio" name="p11" value="C"> C) Para definir el nombre de la base de datos.</label></li>
+                        <li><label><input type="radio" name="p11" value="D"> D) Para autorizar solo las direcciones IP que podrán conectarse al clúster.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p11"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 12 -->
+            <div id="pregunta-12" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">12</div>
+                    <span class="pregunta-tema">¿Qué protocolo se utiliza comúnmente para cifrar los datos en tránsito entre una aplicación y la base de datos?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p12" value="A"> A) HTTP y FTP.</label></li>
+                        <li><label><input type="radio" name="p12" value="B"> B) SMTP y POP3.</label></li>
+                        <li><label><input type="radio" name="p12" value="C"> C) TLS/SSL.</label></li>
+                        <li><label><input type="radio" name="p12" value="D"> D) DNS y DHCP.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p12"></div>
+                </div>
+            </div>
+
+            <!-- Enviar -->
+            <p class="aviso-faltantes" id="aviso-faltantes"></p>
+            <div class="submit-wrap">
+                <button type="button" class="btn-verificar" onclick="verificar()">Revisar respuestas</button>
+            </div>
+
+            <!-- Resultado final -->
+            <div class="resultado-final" id="resultado-final">
+                <div class="resultado-icono" id="resultado-icono"></div>
+                <div class="resultado-titulo" id="resultado-titulo"></div>
+                <div class="resultado-subtitulo" id="resultado-subtitulo"></div>
+                <div class="resultado-barra-wrap">
+                    <div class="resultado-barra" id="resultado-barra"></div>
+                </div>
+                <div class="resultado-detalle" id="resultado-detalle"></div>
+                <button type="button" class="btn-reiniciar" onclick="reiniciar()">🔄 Intentar de nuevo</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bases de Datos En la Nube. Desarrollo de Software Multiplataforma.</p>
+    </footer>
+
+    <script src="../js/practica_no_relacionales.js"></script>
+</body>
+</html>

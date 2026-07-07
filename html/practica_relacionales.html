@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica — Bases de Datos Relacionales</title>
+    <link rel="stylesheet" href="../css/style_temas.css">
+    <link rel="stylesheet" href="../css/style_practica.css">
+</head>
+<body>
+    <header>
+        <div class="hdr-top">
+            <div class="hdr-left">
+                <span class="unidad-badge">Práctica</span>
+                <h2>Práctica de Bases de Datos Relacionales</h2>
+                <p class="header-description">Pon a prueba lo que aprendiste sobre gestores, creación, manipulación y administración de bases de datos relacionales. Lee cada pregunta con atención antes de responder.</p>
+            </div>
+        </div>
+        <nav class="subnav">
+            <ul>
+                <li><a href="gestores_relacionales.html">Gestores</a></li>
+                <li><a href="creacion_relacionales.html">Creación</a></li>
+                <li><a href="manipulacion_relacionales.html">Manipulación</a></li>
+                <li><a href="administracion_relacionales.html">Administración</a></li>
+                <li><a href="practica_relacionales.html" class="activo">Práctica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">Volver al inicio</a>
+
+        <!-- Intro -->
+        <div class="practica-intro">
+            <div>
+                <h3>Instrucciones</h3>
+                <p>Lee cada pregunta y selecciona la opción que consideres correcta. Al finalizar haz clic en <strong>Revisar respuestas</strong> para ver cuáles contestaste bien y cuáles no, junto con una explicación.</p>
+            </div>
+        </div>
+
+        <form id="formulario">
+
+            <!-- Pregunta 1 -->
+            <div id="pregunta-1" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">1</div>
+                    <span class="pregunta-tema">¿Cómo almacenan la información las bases de datos no relacionales?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p1" value="A"> A) En tablas con filas y columnas fijas.</label></li>
+                        <li><label><input type="radio" name="p1" value="B"> B) En estructuras flexibles como documentos, grafos o pares clave-valor.</label></li>
+                        <li><label><input type="radio" name="p1" value="C"> C)  En archivos de texto plano sin ninguna organización.</label></li>
+                        <li><label><input type="radio" name="p1" value="D"> D) En hojas de cálculo conectadas entre sí.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p1"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div id="pregunta-2" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">2</div>
+                    <span class="pregunta-tema">¿Qué ventaja ofrece usar claves foráneas entre tablas?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p2" value="A"> A) Hace que la base de datos ocupe más espacio en el servidor.</label></li>
+                        <li><label><input type="radio" name="p2" value="B"> B) Permite guardar imágenes dentro de las tablas.</label></li>
+                        <li><label><input type="radio" name="p2" value="C"> C) Evita repetir información en varias tablas y mantiene los datos organizados.</label></li>
+                        <li><label><input type="radio" name="p2" value="D"> D) Elimina la necesidad de hacer consultas SQL.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p2"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div id="pregunta-3" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">3</div>
+                    <span class="pregunta-tema">¿Qué beneficio ofrece llevar una base de datos a la nube en lugar de mantenerla en un servidor local?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p3" value="A"> A) Que solo puede ser accedida desde una computadora específica.</label></li>
+                        <li><label><input type="radio" name="p3" value="B"> B) Que está disponible desde cualquier lugar y no depende de un servidor físico.</label></li>
+                        <li><label><input type="radio" name="p3" value="C"> C) Que los datos no pueden ser modificados una vez guardados.</label></li>
+                        <li><label><input type="radio" name="p3" value="D"> D) Que no necesita ningún tipo de seguridad.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p3"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div id="pregunta-4" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">4</div>
+                    <span class="pregunta-tema">¿Cuál es el primer paso para diseñar correctamente una base de datos relacional?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p4" value="A"> A) Crear las tablas directamente en el gestor sin planificación previa.</label></li>
+                        <li><label><input type="radio" name="p4" value="B"> B) Importar datos desde otro sistema existente.</label></li>
+                        <li><label><input type="radio" name="p4" value="C"> C) Identificar las entidades del sistema y sus atributos.</label></li>
+                        <li><label><input type="radio" name="p4" value="D"> D) Escribir consultas SQL antes de crear las tablas.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p4"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div id="pregunta-5" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">5</div>
+                    <span class="pregunta-tema">¿Cuál es la principal ventaja de utilizar una base de datos relacional?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p5" value="A"> A) Para cifrar los datos almacenados en la tabla.</label></li>
+                        <li><label><input type="radio" name="p5" value="B"> B) Para conectar un registro de una tabla con un registro de otra tabla relacionada.</label></li>
+                        <li><label><input type="radio" name="p5" value="C"> C) Para eliminar registros duplicados de forma automática.</label></li>
+                        <li><label><input type="radio" name="p5" value="D"> D) Para ordenar los datos de la tabla de manera alfabética.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p5"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div id="pregunta-6" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">6</div>
+                    <span class="pregunta-tema">¿Qué comando SQL se utiliza para obtener información almacenada en una tabla?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p6" value="A"> A) INSERT</label></li>
+                        <li><label><input type="radio" name="p6" value="B"> B) DELETE</label></li>
+                        <li><label><input type="radio" name="p6" value="C"> C) UPDATE</label></li>
+                        <li><label><input type="radio" name="p6" value="D"> D) SELECT</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p6"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 7 -->
+            <!-- Pregunta 7 — Drag and Drop -->
+            <div id="pregunta-7" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">7</div>
+                    <span class="pregunta-tema">Arrastra cada paso al cuadro que le corresponde según el orden correcto para diseñar y publicar una base de datos en la nube.</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <div class="drag-layout">
+
+                        <!-- Columna izquierda: pasos desordenados -->
+                        <div class="drag-source-wrap">
+                            <p class="drag-label">Pasos disponibles</p>
+                            <div class="drag-source" id="drag-source">
+                                <div class="drag-item" id="paso-b" draggable="true">Definir los atributos de cada entidad</div>
+                                <div class="drag-item" id="paso-e" draggable="true">Exportar la base de datos local</div>
+                                <div class="drag-item" id="paso-d" draggable="true">Crear las tablas en el gestor</div>
+                                <div class="drag-item" id="paso-a" draggable="true">Identificar las entidades del sistema</div>
+                                <div class="drag-item" id="paso-f" draggable="true">Importar la base de datos en la nube</div>
+                                <div class="drag-item" id="paso-c" draggable="true">Establecer las relaciones entre entidades</div>
+                            </div>
+                        </div>
+
+                        <!-- Columna derecha: zonas numeradas -->
+                        <div class="drag-targets-wrap">
+                            <p class="drag-label">Orden correcto</p>
+                            <div class="drag-targets">
+                                <div class="drag-target-row">
+                                    <span class="drag-target-num">1</span>
+                                    <div class="drop-zone" id="zona-1" data-pos="1"></div>
+                                </div>
+                                <div class="drag-target-row">
+                                    <span class="drag-target-num">2</span>
+                                    <div class="drop-zone" id="zona-2" data-pos="2"></div>
+                                </div>
+                                <div class="drag-target-row">
+                                    <span class="drag-target-num">3</span>
+                                    <div class="drop-zone" id="zona-3" data-pos="3"></div>
+                                </div>
+                                <div class="drag-target-row">
+                                    <span class="drag-target-num">4</span>
+                                    <div class="drop-zone" id="zona-4" data-pos="4"></div>
+                                </div>
+                                <div class="drag-target-row">
+                                    <span class="drag-target-num">5</span>
+                                    <div class="drop-zone" id="zona-5" data-pos="5"></div>
+                                </div>
+                                <div class="drag-target-row">
+                                    <span class="drag-target-num">6</span>
+                                    <div class="drop-zone" id="zona-6" data-pos="6"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="feedback" id="feedback-p7"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 8 -->
+            <div id="pregunta-8" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">8</div>
+                    <span class="pregunta-tema">¿Qué diferencia hay entre los comandos UPDATE y DELETE en SQL?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p8" value="A"> A) Ambos eliminan registros de la tabla de la misma manera.</label></li>
+                        <li><label><input type="radio" name="p8" value="B"> B) UPDATE elimina registros y DELETE los modifica.</label></li>
+                        <li><label><input type="radio" name="p8" value="C"> C) UPDATE modifica datos existentes, mientras que DELETE elimina registros completos de la tabla.</label></li>
+                        <li><label><input type="radio" name="p8" value="D"> D) No hay diferencia, ambos realizan la misma operación.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p8"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 9 -->
+            <div id="pregunta-9" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">9</div>
+                    <span class="pregunta-tema">¿Qué significa el término CRUD en el contexto de bases de datos?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p9" value="A"> A) Create, Remove, Update, Delete</label></li>
+                        <li><label><input type="radio" name="p9" value="B"> B) Copy, Read, Undo, Delete</label></li>
+                        <li><label><input type="radio" name="p9" value="C"> C) Create, Read, Update, Delete</label></li>
+                        <li><label><input type="radio" name="p9" value="D"> D) Connect, Run, Upload, Download</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p9"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 10 -->
+            <div id="pregunta-10" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">10</div>
+                    <span class="pregunta-tema">¿Para qué sirve asignar privilegios a los usuarios de una base de datos?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p10" value="A"> A) Para que todos los usuarios puedan realizar cualquier acción sin restricciones.</label></li>
+                        <li><label><input type="radio" name="p10" value="B"> B) Para controlar qué operaciones puede realizar cada usuario según su función.</label></li>
+                        <li><label><input type="radio" name="p10" value="C"> C) Para que la base de datos funcione más rápido.</label></li>
+                        <li><label><input type="radio" name="p10" value="D"> D) Para cambiar el diseño de las tablas de forma automática.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p10"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 11 -->
+            <div id="pregunta-11" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">11</div>
+                    <span class="pregunta-tema">¿Qué privilegio es el adecuado para asignarle a un usuario que solo necesita consultar reportes y no debe poder modificar ningún dato?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p11" value="A"> A) ALL PRIVILEGES</label></li>
+                        <li><label><input type="radio" name="p11" value="B"> B) INSERT</label></li>
+                        <li><label><input type="radio" name="p11" value="C"> C) DELETE</label></li>
+                        <li><label><input type="radio" name="p11" value="D"> D) SELECT</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p11"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 12 -->
+            <div id="pregunta-12" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">12</div>
+                    <span class="pregunta-tema">¿Cuál es la ventaja principal de usar roles en lugar de asignar privilegios individualmente a cada usuario?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p12" value="A"> A) Los roles eliminan la necesidad de que los usuarios tengan contraseña.</label></li>
+                        <li><label><input type="radio" name="p12" value="B"> B) Facilitan la administración porque se asigna el rol al usuario y este hereda todos los permisos del rol.</label></li>
+                        <li><label><input type="radio" name="p12" value="C"> C) Los roles permiten acceder a la base de datos sin credenciales de ningún tipo.</label></li>
+                        <li><label><input type="radio" name="p12" value="D"> D) Los roles solo funcionan en bases de datos instaladas localmente.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p12"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 13 -->
+            <div id="pregunta-13" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">13</div>
+                    <span class="pregunta-tema">¿Qué hace el comando FLUSH PRIVILEGES después de asignar permisos en MySQL?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p13" value="A"> A) Elimina todos los permisos asignados a los usuarios.</label></li>
+                        <li><label><input type="radio" name="p13" value="B"> B) Crea un nuevo usuario automáticamente en el sistema.</label></li>
+                        <li><label><input type="radio" name="p13" value="C"> C) Exporta los permisos actuales a un archivo de respaldo.</label></li>
+                        <li><label><input type="radio" name="p13" value="D"> D) Actualiza los privilegios en el gestor para que los cambios entren en vigor de inmediato.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p13"></div>
+                </div>
+            </div>
+
+            <!-- Enviar -->
+            <p class="aviso-faltantes" id="aviso-faltantes"></p>
+            <div class="submit-wrap">
+                <button type="button" class="btn-verificar" onclick="verificar()">Revisar respuestas</button>
+            </div>
+
+            <!-- Resultado final -->
+            <div class="resultado-final" id="resultado-final">
+                <div class="resultado-icono" id="resultado-icono"></div>
+                <div class="resultado-titulo" id="resultado-titulo"></div>
+                <div class="resultado-subtitulo" id="resultado-subtitulo"></div>
+                <div class="resultado-barra-wrap">
+                    <div class="resultado-barra" id="resultado-barra"></div>
+                </div>
+                <div class="resultado-detalle" id="resultado-detalle"></div>
+                <button type="button" class="btn-reiniciar" onclick="reiniciar()">Intentar de nuevo</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bases de Datos En la Nube. Desarrollo de Software Multiplataforma.</p>
+    </footer>
+
+    <script src="../js/practica_relacionales.js"></script>
+</body>
+</html>
