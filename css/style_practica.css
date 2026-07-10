@@ -523,7 +523,7 @@
     opacity: 0.75;
 }
 
-/* ── Drop zone múltiple (drag and drop de selección) ── */
+/* ── Drop zone múltiple (drag and drop de selección) ── ////*/
 .drop-zone-multi {
     flex: 1;
     min-height: 280px;
