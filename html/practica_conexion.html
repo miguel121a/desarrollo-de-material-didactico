@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica — Conexión y Consumo de Bases de Datos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_temas.css">
+    <link rel="stylesheet" href="../css/style_practica.css">
+</head>
+<body>
+    <header>
+        <div class="hdr-top">
+            <div class="hdr-left">
+                <span class="unidad-badge">Práctica — Unidad III</span>
+                <h2>Cuestionario — Conexión y Consumo de Bases de Datos</h2>
+                <p class="header-description">Pon a prueba lo que aprendiste sobre cómo las aplicaciones se conectan y consumen datos desde bases de datos en la nube. Algunas actividades requieren arrastrar elementos, lee bien las instrucciones de cada pregunta antes de responder.</p>
+            </div>
+        </div>
+        <nav class="subnav">
+            <ul>
+                <li><a href="conexion_bd.html">Conexión a bases de datos</a></li>
+                <li><a href="consumo_bd.html">Consumo de datos</a></li>
+                <li><a href="practica_conexion.html" class="activo">Práctica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">Volver al inicio</a>
+
+        <div class="practica-intro">
+            <div>
+                <h3>Instrucciones</h3>
+                <p>Lee cada pregunta con atención. Las preguntas de opción múltiple requieren seleccionar una respuesta. Las actividades de arrastre requieren identificar y colocar únicamente los elementos correctos en la zona indicada. Al finalizar haz clic en <strong>Revisar respuestas</strong>.</p>
+            </div>
+        </div>
+
+        <form id="frm-practica3">
+
+            <!-- Pregunta 1 -->
+            <div id="pregunta-1" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">1</div>
+                    <span class="pregunta-tema">¿Cuál es la diferencia entre crear una base de datos y conectarse a ella?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p1" value="A"> A) Son el mismo proceso, solo cambia el nombre.</label></li>
+                        <li><label><input type="radio" name="p1" value="B"> B) Crear define la estructura; conectarse abre un canal de comunicación hacia ella.</label></li>
+                        <li><label><input type="radio" name="p1" value="C"> C) Conectarse crea la base de datos automáticamente.</label></li>
+                        <li><label><input type="radio" name="p1" value="D"> D) Crear requiere internet y conectarse no.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p1"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div id="pregunta-2" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">2</div>
+                    <span class="pregunta-tema">¿Para qué sirve el puerto de comunicación en una conexión a base de datos?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p2" value="A"> A) Para cifrar los datos que se transmiten.</label></li>
+                        <li><label><input type="radio" name="p2" value="B"> B) Para identificar el servicio de base de datos dentro del servidor.</label></li>
+                        <li><label><input type="radio" name="p2" value="C"> C) Para guardar el nombre de usuario y contraseña.</label></li>
+                        <li><label><input type="radio" name="p2" value="D"> D) Para seleccionar qué base de datos usar cuando hay varias.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p2"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div id="pregunta-3" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">3</div>
+                    <span class="pregunta-tema">¿Por qué es recomendable guardar los datos de conexión en variables de entorno en lugar de escribirlos directamente en el código?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p3" value="A"> A) Porque el código no puede leer cadenas de texto largas.</label></li>
+                        <li><label><input type="radio" name="p3" value="B"> B) Para que la conexión sea más rápida.</label></li>
+                        <li><label><input type="radio" name="p3" value="C"> C) Para facilitar la administración y mejorar la seguridad de la aplicación.</label></li>
+                        <li><label><input type="radio" name="p3" value="D"> D) Porque los gestores de bases de datos lo exigen obligatoriamente.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p3"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 — Drag and Drop -->
+            <div id="pregunta-4" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">4</div>
+                    <span class="pregunta-tema">Un desarrollador está configurando la conexión de su aplicación a una base de datos en la nube. Arrastra únicamente los elementos que son necesarios para establecer esa conexión.</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <div class="drag-layout">
+                        <div class="drag-source-wrap">
+                            <p class="drag-label">Opciones</p>
+                            <div class="drag-source" id="drag-source-4">
+                                <div class="drag-item" id="d4-a" draggable="true">Dirección del servidor (Host)</div>
+                                <div class="drag-item" id="d4-b" draggable="true">El número de tablas que tiene la base de datos</div>
+                                <div class="drag-item" id="d4-c" draggable="true">Credenciales de acceso (usuario y contraseña)</div>
+                                <div class="drag-item" id="d4-d" draggable="true">El lenguaje de programación de la aplicación</div>
+                                <div class="drag-item" id="d4-e" draggable="true">Nombre de la base de datos</div>
+                                <div class="drag-item" id="d4-f" draggable="true">El sistema operativo del servidor</div>
+                                <div class="drag-item" id="d4-g" draggable="true">Puerto de comunicación</div>
+                            </div>
+                        </div>
+                        <div class="drag-targets-wrap">
+                            <p class="drag-label">Elementos necesarios (arrastra 4)</p>
+                            <div class="drop-zone-multi" id="drop-zone-4"></div>
+                        </div>
+                    </div>
+                    <div class="feedback" id="feedback-p4"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div id="pregunta-5" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">5</div>
+                    <span class="pregunta-tema">¿Qué permite hacer el consumo de datos en la nube que no sería posible con copias locales?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p5" value="A"> A) Guardar datos sin necesitar internet.</label></li>
+                        <li><label><input type="radio" name="p5" value="B"> B) Que distintas aplicaciones trabajen con la misma información actualizada en tiempo real.</label></li>
+                        <li><label><input type="radio" name="p5" value="C"> C) Reducir el tamaño de la base de datos automáticamente.</label></li>
+                        <li><label><input type="radio" name="p5" value="D"> D) Eliminar la necesidad de usar credenciales de acceso.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p5"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div id="pregunta-6" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">6</div>
+                    <span class="pregunta-tema">¿Qué método de consumo de datos permite al cliente especificar exactamente qué campos necesita en una sola solicitud, evitando recibir información innecesaria?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p6" value="A"> A) ORM</label></li>
+                        <li><label><input type="radio" name="p6" value="B"> B) Driver nativo (JDBC)</label></li>
+                        <li><label><input type="radio" name="p6" value="C"> C) API REST</label></li>
+                        <li><label><input type="radio" name="p6" value="D"> D) GraphQL</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p6"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 7 -->
+            <div id="pregunta-7" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">7</div>
+                    <span class="pregunta-tema">Lee el siguiente fragmento de código e identifica qué método de consumo de datos representa:</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="lista" style="margin-bottom:14px;">
+                        <li>
+                            <code>fetch("https://api.miapp.com/usuarios")
+  .then(response => response.json())
+  .then(data => console.log(data));</code>
+                        </li>
+                    </ul>
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p7" value="A"> A) GraphQL</label></li>
+                        <li><label><input type="radio" name="p7" value="B"> B) ORM con Sequelize</label></li>
+                        <li><label><input type="radio" name="p7" value="C"> C) API REST con fetch</label></li>
+                        <li><label><input type="radio" name="p7" value="D"> D) Driver nativo JDBC</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p7"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 8 -->
+            <div id="pregunta-8" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">8</div>
+                    <span class="pregunta-tema">¿Cuál es la principal ventaja de usar un ORM frente a escribir SQL directamente?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p8" value="A"> A) Es más rápido en todos los casos.</label></li>
+                        <li><label><input type="radio" name="p8" value="B"> B) Permite representar las tablas como objetos o clases, evitando escribir SQL directo.</label></li>
+                        <li><label><input type="radio" name="p8" value="C"> C) Solo funciona con bases de datos NoSQL.</label></li>
+                        <li><label><input type="radio" name="p8" value="D"> D) Elimina la necesidad de tener una base de datos.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p8"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 9 — Drag and Drop -->
+            <div id="pregunta-9" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">9</div>
+                    <span class="pregunta-tema">Del siguiente listado, arrastra únicamente los métodos válidos para consumir datos desde una aplicación.</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <div class="drag-layout">
+                        <div class="drag-source-wrap">
+                            <p class="drag-label">Opciones</p>
+                            <div class="drag-source" id="drag-source-9">
+                                <div class="drag-item" id="d9-a" draggable="true">API REST</div>
+                                <div class="drag-item" id="d9-b" draggable="true">SHOW TABLES</div>
+                                <div class="drag-item" id="d9-c" draggable="true">GraphQL</div>
+                                <div class="drag-item" id="d9-d" draggable="true">AUTO_INCREMENT</div>
+                                <div class="drag-item" id="d9-e" draggable="true">ORM (Sequelize, Hibernate)</div>
+                                <div class="drag-item" id="d9-f" draggable="true">FLUSH PRIVILEGES</div>
+                                <div class="drag-item" id="d9-g" draggable="true">Conectores o drivers nativos</div>
+                            </div>
+                        </div>
+                        <div class="drag-targets-wrap">
+                            <p class="drag-label">Métodos válidos (arrastra 4)</p>
+                            <div class="drop-zone-multi" id="drop-zone-9"></div>
+                        </div>
+                    </div>
+                    <div class="feedback" id="feedback-p9"></div>
+                </div>
+            </div>
+
+            <!-- Pregunta 10 -->
+            <div id="pregunta-10" class="pregunta-card">
+                <div class="pregunta-card-header">
+                    <div class="pregunta-num">10</div>
+                    <span class="pregunta-tema">Una aplicación móvil necesita obtener solo el nombre y la edad de los usuarios mayores de 18 años, sin recibir datos innecesarios. ¿Qué método de consumo sería el más adecuado?</span>
+                </div>
+                <div class="pregunta-card-body">
+                    <ul class="opciones-lista">
+                        <li><label><input type="radio" name="p10" value="A"> A) Driver nativo JDBC.</label></li>
+                        <li><label><input type="radio" name="p10" value="B"> B) API REST con GET.</label></li>
+                        <li><label><input type="radio" name="p10" value="C"> C) GraphQL.</label></li>
+                        <li><label><input type="radio" name="p10" value="D"> D) ORM con findAll.</label></li>
+                    </ul>
+                    <div class="feedback" id="feedback-p10"></div>
+                </div>
+            </div>
+
+            <!-- Enviar -->
+            <p class="aviso-faltantes" id="aviso-faltantes"></p>
+            <div class="submit-wrap">
+                <button type="button" class="btn-verificar" onclick="verificar()">Revisar respuestas</button>
+            </div>
+
+            <!-- Resultado final -->
+            <div class="resultado-final" id="resultado-final">
+                <div class="resultado-icono" id="resultado-icono"></div>
+                <div class="resultado-titulo" id="resultado-titulo"></div>
+                <div class="resultado-subtitulo" id="resultado-subtitulo"></div>
+                <div class="resultado-barra-wrap">
+                    <div class="resultado-barra" id="resultado-barra"></div>
+                </div>
+                <div class="resultado-detalle" id="resultado-detalle"></div>
+                <button type="button" class="btn-reiniciar" onclick="reiniciar()">🔄 Intentar de nuevo</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bases de Datos En la Nube. Desarrollo de Software Multiplataforma.</p>
+    </footer>
+
+    <script src="../js/practica_conexion.js"></script>
+</body>
+</html>

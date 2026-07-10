@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de datos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_temas.css">
+</head>
+<body>
+
+    <header>
+        <div class="hdr-top">
+            <div class="hdr-left">
+                <span class="unidad-badge">Unidad III</span>
+                <h2>Consumo de datos</h2>
+                <p class="header-description">
+                    Descubre cómo las aplicaciones se conectan a una base de datos alojada en la nube
+                    para consultar, insertar, actualizar o eliminar información, y conoce las formas más
+                    comunes de consumir esos datos, tanto mediante conectores directos como a través de APIs.
+                </p>
+            </div>
+        </div>
+        <nav class="subnav">
+            <ul>
+                <li><a href="conexion_bd.html">Conexión a bases de datos</a></li>
+                <li><a href="consumo_bd.html" class="activo">Consumo de datos</a></li>
+                <li><a href="practica_conexion.html">Práctica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">Volver al inicio</a>
+
+        <!-- Sección 1: Qué es el consumo de datos -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">1</div>
+                <h2>¿Qué es el consumo de datos en la nube?</h2>
+            </div>
+            <div class="temas-body">
+                <p>
+                    El consumo de datos en la nube es el proceso mediante el cual una aplicación se
+                    comunica con una base de datos alojada en un servicio en línea para consultar, insertar,
+                    actualizar o eliminar información de manera remota. Gracias a este proceso, un sistema
+                    puede acceder a la información almacenada sin importar el dispositivo o el lugar desde
+                    donde se realice la solicitud.
+                </p>
+                <p>
+                    Diversos autores especializados en administración de bases de datos en la nube coinciden
+                    en que integrar aplicaciones con bases de datos remotas es uno de los pilares del
+                    desarrollo de software actual, ya que permite construir sistemas distribuidos, escalables
+                    y capaces de atender a miles de usuarios de manera simultánea (Neu, Vlasceanu, Oram y
+                    Alapati, 2019).
+                </p>
+                <p>
+                    Este proceso resulta esencial porque permite que distintas aplicaciones, ya sean web, móviles
+                    o de escritorio, trabajen con la misma información actualizada en tiempo real, sin necesidad
+                    de mantener copias locales que puedan volverse obsoletas o inconsistentes entre sí.
+                </p>
+            </div>
+        </div>
+
+        <!-- Sección 2: Métodos más comunes para consumir datos -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">2</div>
+                <h2>Métodos más comunes para consumir datos</h2>
+            </div>
+            <div class="temas-body">
+                <p>
+                    Una vez que la aplicación está conectada a la base de datos en la nube, existen
+                    distintas formas de consumir la información almacenada. A continuación se presentan
+                    los métodos más utilizados en el desarrollo de software actual.
+                </p>
+
+                <h3>APIs REST</h3>
+                <p>
+                    Es el método más común para consumir datos desde aplicaciones web y móviles. La
+                    aplicación cliente envía solicitudes HTTP (GET, POST, PUT, DELETE) a un servidor que
+                    expone los datos, sin necesidad de conectarse directamente al motor de base de datos.
+                </p>
+                <ul class="lista">
+                    <li>
+                        <strong>Ejemplo de sintaxis (JavaScript, fetch)</strong>
+                        <code>fetch("https://api.miapp.com/usuarios")
+  .then(response => response.json())
+  .then(data => console.log(data));</code>
+                    </li>
+                </ul>
+
+                <h3>ORM (Object-Relational Mapping)</h3>
+                <p>
+                    Permite consumir datos representando las tablas de la base de datos como objetos o
+                    clases dentro del código de la aplicación, evitando escribir SQL de forma directa.
+                    Es muy utilizado en frameworks backend modernos.
+                </p>
+                <ul class="lista">
+                    <li>
+                        <strong>Ejemplo de sintaxis (Sequelize, Node.js)</strong>
+                        <code>const usuarios = await Usuario.findAll({
+  where: { edad: { [Op.gt]: 18 } }
+});</code>
+                    </li>
+                </ul>
+
+                <h3>Conectores o drivers nativos</h3>
+                <p>
+                    Son librerías específicas del lenguaje de programación que permiten a la aplicación
+                    comunicarse directamente con el motor de base de datos, enviando consultas SQL y
+                    recibiendo los resultados dentro del mismo código.
+                </p>
+                <ul class="lista">
+                    <li>
+                        <strong>Ejemplo de sintaxis (JDBC, Java)</strong>
+                        <code>Connection conn = DriverManager.getConnection(url, usuario, contraseña);
+Statement stmt = conn.createStatement();
+ResultSet rs = stmt.executeQuery("SELECT * FROM usuarios");</code>
+                    </li>
+                </ul>
+
+                <h3>GraphQL</h3>
+                <p>
+                    Es una alternativa a las APIs REST que permite al cliente especificar exactamente qué
+                    datos necesita en una sola solicitud, evitando recibir información innecesaria.
+                </p>
+                <ul class="lista">
+                    <li>
+                        <strong>Ejemplo de sintaxis (consulta GraphQL)</strong>
+                        <code>query {
+  usuarios(edadMinima: 18) {
+    nombre
+    edad
+  }
+}</code>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bases de Datos En la Nube. Desarrollo de Software Multiplataforma.</p>
+    </footer>
+
+</body>
+</html>

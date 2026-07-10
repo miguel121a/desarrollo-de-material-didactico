@@ -1,147 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Conceptos básicos de bases de datos</title>
-<link rel="stylesheet" href="../css/style_temas.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos básicos de bases de datos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_temas.css">
 </head>
 <body>
+    <header>
+        <div class="hdr-top">
+            <div class="hdr-left">
+                <span class="unidad-badge">Unidad I</span>
+                <h2>Conceptos básicos de bases de datos</h2>
+                <p class="header-description">
+                    Conoce los fundamentos de las bases de datos, incluyendo conceptos esenciales, su estructura y los elementos
+                    que las conforman. Este tema te ayudará a comprender, de forma clara y sencilla, cómo se organiza la
+                    información antes de trabajar con bases de datos relacionales y no relacionales.
+                </p>
+            </div>
+        </div>
+    </header>
 
-<header>
-  <div class="hdr-top">
-    <div class="hdr-left">
-      <span class="unidad-badge">Unidad I</span>
-      <h2>Conceptos básicos de bases de datos</h2>
-      <p class="header-description">
-        Conoce los fundamentos de las bases de datos, incluyendo conceptos esenciales, su estructura y los elementos que las conforman. Este tema te ayudará a comprender, de forma clara y sencilla, cómo se organiza la información antes de trabajar con bases de datos relacionales y no relacionales.
-      </p>
-    </div>
-  </div>
+    <main>
+        <a href="index.html" class="back-btn">Volver al inicio</a>
 
-</header>
+        <!-- Sección 1: Conceptos esenciales -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">1</div>
+                <h2>Conceptos esenciales</h2>
+            </div>
+            <div class="temas-body">
+                <p>
+                    Antes de trabajar con una base de datos es importante conocer algunos términos básicos que se usan
+                    constantemente en su manejo. Estos conceptos aplican tanto a bases de datos relacionales como no relacionales,
+                    y son la base para entender cómo se organiza y se administra la información.
+                </p>
+                <ul class="lista">
+                    <li>
+                        <strong>Dato</strong>
+                        <p>Es la unidad más pequeña de información, por sí sola no dice mucho, por ejemplo el número "20" o el texto "María".</p>
+                    </li>
+                    <li>
+                        <strong>Información</strong>
+                        <p>Es el resultado de organizar varios datos para que tengan un significado claro, por ejemplo "María tiene 20 años".</p>
+                    </li>
+                    <li>
+                        <strong>Sistema Gestor de Bases de Datos (SGBD)</strong>
+                        <p>Es el software que se encarga de crear, guardar, modificar y proteger la información, tanto en bases de datos relacionales (como MySQL) como no relacionales (como MongoDB).</p>
+                    </li>
+                    <li>
+                        <strong>Base de datos relacional</strong>
+                        <p>Guarda la información en tablas fijas, formadas por filas y columnas, donde cada dato debe encajar en un formato ya definido.</p>
+                    </li>
+                    <li>
+                        <strong>Base de datos no relacional</strong>
+                        <p>Guarda la información de forma más libre, sin depender de tablas fijas, por ejemplo en documentos, lo que permite adaptarse más fácilmente a datos que cambian con frecuencia.</p>
+                    </li>
+                    <li>
+                        <strong>Esquema</strong>
+                        <p>Es el diseño o "plano" de la base de datos: en el modelo relacional define las tablas y columnas; en el no relacional puede ser más flexible o incluso no existir de forma fija.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-<main>
-  <a href="index.html" class="back-btn">Volver al inicio</a>
+        <!-- Sección 2: Estructura y elementos -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">2</div>
+                <h2>Estructura y elementos de una base de datos</h2>
+            </div>
+            <div class="temas-body">
+                <p>
+                    La forma en que se organiza la información cambia dependiendo del tipo de base de datos. A continuación se
+                    explica cómo se estructura en cada caso, tanto en el modelo relacional, basado en tablas, como en el modelo no
+                    relacional, más flexible y adaptable a distintos formatos de información.
+                </p>
 
-  <!-- 1. Conceptos esenciales -->
-  <section class="temas">
-    <div class="temas-header">
-      <div class="temas-num">1</div>
-      <h2>Conceptos esenciales</h2>
-    </div>
-    <div class="temas-body">
-      <p>
-        Antes de trabajar con una base de datos es importante conocer algunos términos básicos que se usan constantemente en su manejo. Estos conceptos aplican tanto a bases de datos relacionales como no relacionales, y son la base para entender cómo se organiza y se administra la información.
-      </p>
-      <ul class="lista">
-        <li>
-          <strong>Dato</strong>
-          <p>Es la unidad más pequeña de información, por sí sola no dice mucho, por ejemplo el número "20" o el texto "María".</p>
-        </li>
-        <li>
-          <strong>Información</strong>
-          <p>Es el resultado de organizar varios datos para que tengan un significado claro, por ejemplo "María tiene 20 años".</p>
-        </li>
-        <li>
-          <strong>Sistema Gestor de Bases de Datos (SGBD)</strong>
-          <p>Es el software que se encarga de crear, guardar, modificar y proteger la información, tanto en bases de datos relacionales (como MySQL) como no relacionales (como MongoDB).</p>
-        </li>
-        <li>
-          <strong>Base de datos relacional</strong>
-          <p>Guarda la información en tablas fijas, formadas por filas y columnas, donde cada dato debe encajar en un formato ya definido.</p>
-        </li>
-        <li>
-          <strong>Base de datos no relacional</strong>
-          <p>Guarda la información de forma más libre, sin depender de tablas fijas, por ejemplo en documentos, lo que permite adaptarse más fácilmente a datos que cambian con frecuencia.</p>
-        </li>
-        <li>
-          <strong>Esquema</strong>
-          <p>Es el diseño o "plano" de la base de datos: en el modelo relacional define las tablas y columnas; en el no relacional puede ser más flexible o incluso no existir de forma fija.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
+                <h3>En una base de datos relacional</h3>
+                <p>La información se organiza en tablas, muy parecido a una hoja de cálculo:</p>
+                <ul class="lista">
+                    <li>
+                        <strong>Tabla</strong>
+                        <p>Es como una carpeta o una hoja donde se guarda toda la información relacionada con un mismo tema, por ejemplo "alumnos" o "productos". Está formada por filas y columnas, y su estructura debe estar definida desde antes de guardar datos en ella.</p>
+                    </li>
+                    <li>
+                        <strong>Registro (fila)</strong>
+                        <p>Es un elemento específico dentro de la tabla, es decir, un solo caso, por ejemplo un alumno en particular llamado "Ana". Cada fila representa un registro completo con toda su información.</p>
+                    </li>
+                    <li>
+                        <strong>Campo (columna)</strong>
+                        <p>Es cada una de las características que describen a un registro, por ejemplo el nombre, la edad o el correo electrónico. Todas las filas de la tabla deben tener las mismas columnas.</p>
+                    </li>
+                </ul>
 
-  <!-- 2. Estructura y elementos de una base de datos -->
-  <section class="temas">
-    <div class="temas-header">
-      <div class="temas-num">2</div>
-      <h2>Estructura y elementos de una base de datos</h2>
-    </div>
-    <div class="temas-body">
-      <p>
-        La forma en que se organiza la información cambia dependiendo del tipo de base de datos. A continuación se explica cómo se estructura en cada caso, tanto en el modelo relacional, basado en tablas, como en el modelo no relacional, más flexible y adaptable a distintos formatos de información.
-      </p>
+                <h3>En una base de datos no relacional</h3>
+                <p>La información se organiza de una forma más libre, generalmente en documentos:</p>
+                <ul class="lista">
+                    <li>
+                        <strong>Colección</strong>
+                        <p>Es el equivalente a una tabla, es decir, un grupo donde se guardan documentos relacionados con un mismo tema, por ejemplo "alumnos". A diferencia de la tabla, no exige que todos los documentos tengan exactamente la misma forma.</p>
+                    </li>
+                    <li>
+                        <strong>Documento</strong>
+                        <p>Es el equivalente a un registro: representa un solo caso, por ejemplo un alumno en particular. Se guarda en un formato parecido a JSON, donde cada documento puede tener campos distintos entre sí.</p>
+                    </li>
+                    <li>
+                        <strong>Campo (propiedad)</strong>
+                        <p>Es cada una de las características que describen al documento, por ejemplo el nombre o la edad. A diferencia de las columnas de una tabla, los campos pueden variar de un documento a otro dentro de la misma colección.</p>
+                    </li>
+                </ul>
 
-      <h3>En una base de datos relacional</h3>
-      <p>
-        La información se organiza en tablas, muy parecido a una hoja de cálculo:
-      </p>
-      <ul class="lista">
-        <li>
-          <strong>Tabla</strong>
-          <p>Es como una carpeta o una hoja donde se guarda toda la información relacionada con un mismo tema, por ejemplo "alumnos" o "productos". Está formada por filas y columnas, y su estructura debe estar definida desde antes de guardar datos en ella.</p>
-        </li>
-        <li>
-          <strong>Registro (fila)</strong>
-          <p>Es un elemento específico dentro de la tabla, es decir, un solo caso, por ejemplo un alumno en particular llamado "Ana". Cada fila representa un registro completo con toda su información.</p>
-        </li>
-        <li>
-          <strong>Campo (columna)</strong>
-          <p>Es cada una de las características que describen a un registro, por ejemplo el nombre, la edad o el correo electrónico. Todas las filas de la tabla deben tener las mismas columnas.</p>
-        </li>
-      </ul>
+                <h3>Elementos que garantizan su correcto funcionamiento</h3>
+                <p>
+                    Además de la estructura, existen elementos que ayudan a que la información se mantenga completa, relacionada
+                    correctamente y sea fácil de consultar. Algunos son propios de las bases de datos relacionales y otros aplican
+                    también a las no relacionales:
+                </p>
+                <ul class="lista">
+                    <li>
+                        <strong>Clave primaria (Primary Key) — Bases de datos relacionales</strong>
+                        <p>Es un dato que identifica a cada registro de forma única dentro de una tabla, como si fuera su "número de identificación". Gracias a ella, ningún registro se puede confundir con otro, incluso si comparten el mismo nombre u otros datos. En una base de datos no relacional existe un concepto equivalente, generalmente un identificador único generado automáticamente para cada documento.</p>
+                    </li>
+                    <li>
+                        <strong>Clave foránea (Foreign Key) — Bases de datos relacionales</strong>
+                        <p>Es un campo que conecta la información de una tabla con la de otra, haciendo referencia a la clave primaria de esa segunda tabla. Esto permite relacionar, por ejemplo, un alumno con la escuela a la que pertenece. Las bases de datos no relacionales normalmente no usan claves foráneas, ya que suelen guardar la información relacionada dentro del mismo documento.</p>
+                    </li>
+                    <li>
+                        <strong>Índices — Ambos tipos de bases de datos</strong>
+                        <p>Funcionan de manera parecida al índice de un libro: permiten que la base de datos encuentre la información mucho más rápido, en lugar de tener que revisar registro por registro o documento por documento cada vez que se hace una búsqueda. Tanto las bases de datos relacionales como las no relacionales pueden usar índices.</p>
+                    </li>
+                    <li>
+                        <strong>Restricciones (Constraints) — Principalmente en bases de datos relacionales</strong>
+                        <p>Son reglas que se aplican a los campos de una tabla para evitar errores al guardar información, por ejemplo que un correo electrónico no se pueda repetir o que un campo obligatorio no pueda quedar vacío. En las bases de datos no relacionales estas reglas son opcionales y se conocen generalmente como reglas de validación.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-      <h3>En una base de datos no relacional</h3>
-      <p>
-        La información se organiza de una forma más libre, generalmente en documentos:
-      </p>
-      <ul class="lista">
-        <li>
-          <strong>Colección</strong>
-          <p>Es el equivalente a una tabla, es decir, un grupo donde se guardan documentos relacionados con un mismo tema, por ejemplo "alumnos". A diferencia de la tabla, no exige que todos los documentos tengan exactamente la misma forma.</p>
-        </li>
-        <li>
-          <strong>Documento</strong>
-          <p>Es el equivalente a un registro: representa un solo caso, por ejemplo un alumno en particular. Se guarda en un formato parecido a JSON, donde cada documento puede tener campos distintos entre sí.</p>
-        </li>
-        <li>
-          <strong>Campo (propiedad)</strong>
-          <p>Es cada una de las características que describen al documento, por ejemplo el nombre o la edad. A diferencia de las columnas de una tabla, los campos pueden variar de un documento a otro dentro de la misma colección.</p>
-        </li>
-      </ul>
+    </main>
 
-      <h3>Elementos que garantizan su correcto funcionamiento</h3>
-      <p>
-        Además de la estructura, existen elementos que ayudan a que la información se mantenga
-        completa, relacionada correctamente y sea fácil de consultar. Algunos son propios de las
-        bases de datos relacionales y otros aplican también a las no relacionales:
-      </p>
-      <ul class="lista">
-        <li>
-          <strong>Clave primaria (Primary Key) — Bases de datos relacionales</strong>
-          <p>Es un dato que identifica a cada registro de forma única dentro de una tabla, como si fuera su "número de identificación". Gracias a ella, ningún registro se puede confundir con otro, incluso si comparten el mismo nombre u otros datos. En una base de datos no relacional existe un concepto equivalente, generalmente un identificador único generado automáticamente para cada documento.</p>
-        </li>
-        <li>
-          <strong>Clave foránea (Foreign Key) — Bases de datos relacionales</strong>
-          <p>Es un campo que conecta la información de una tabla con la de otra, haciendo referencia a la clave primaria de esa segunda tabla. Esto permite relacionar, por ejemplo, un alumno con la escuela a la que pertenece. Las bases de datos no relacionales normalmente no usan claves foráneas, ya que suelen guardar la información relacionada dentro del mismo documento.</p>
-        </li>
-        <li>
-          <strong>Índices — Ambos tipos de bases de datos</strong>
-          <p>Funcionan de manera parecida al índice de un libro: permiten que la base de datos encuentre la información mucho más rápido, en lugar de tener que revisar registro por registro o documento por documento cada vez que se hace una búsqueda. Tanto las bases de datos relacionales como las no relacionales pueden usar índices.</p>
-        </li>
-        <li>
-          <strong>Restricciones (Constraints) — Principalmente en bases de datos relacionales</strong>
-          <p>Son reglas que se aplican a los campos de una tabla para evitar errores al guardar información, por ejemplo que un correo electrónico no se pueda repetir o que un campo obligatorio no pueda quedar vacío. En las bases de datos no relacionales estas reglas son opcionales y se conocen generalmente como reglas de validación.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-</main>
-
-<footer>
+    <footer>
         <p>&copy; 2026 Bases de Datos En la Nube. Desarrollo de Software Multiplataforma.</p>
-</footer>
+    </footer>
 
 </body>
 </html>
