@@ -61,8 +61,180 @@
                 </ul>
             </div>
         </div>
+        <!-- Sección 2: Métodos para crear una base de datos -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">2</div>
+                <h2>Metodos para crear una base de datos</h2>
+            </div>
+            <div class="temas-body">
+                <p>
+                    La creación de una base de datos relacional puede realizarse mediante diferentes métodos, cada uno diseñado para adaptarse a distintos niveles de experiencia y necesidades. Algunos usuarios prefieren herramientas gráficas debido a su facilidad de uso, mientras que otros optan por utilizar comandos SQL porque ofrecen un mayor control sobre la administración de la base de datos. Actualmente también es posible crear bases de datos desde plataformas en la nube, permitiendo administrarlas sin necesidad de instalar un servidor local.
+                </p>
+                <p>
+                    La elección del método dependerá del gestor de bases de datos empleado, el entorno de trabajo y el tipo de aplicación que se desee desarrollar. A continuación se describen los métodos más utilizados.
+                </p>
+                <h3>Usando la interfaz gráfica</h3>
+                <p>
+                    La interfaz gráfica de usuario (Graphical User Interface o GUI) es uno de los métodos más sencillos para crear una base de datos. Consiste en utilizar aplicaciones que proporcionan ventanas, botones, formularios y menús que permiten realizar las tareas de administración sin necesidad de escribir instrucciones SQL manualmente.
+                </p>
+                <p>
+                    Una ventaja importante de este método es que reduce la posibilidad de cometer errores de sintaxis, ya que la mayoría de las opciones se encuentran disponibles mediante asistentes gráficos. Además, facilita la administración posterior de tablas, usuarios, relaciones y consultas.
+                </p>
+                <h3>Usando comandos SQL</h3>
+                <p>
+                    Otra forma ampliamente utilizada consiste en crear la base de datos mediante instrucciones SQL (Structured Query Language). Este método es el más empleado por desarrolladores y administradores de bases de datos, ya que permite automatizar procesos, crear scripts reutilizables y administrar servidores de manera más eficiente.
+                </p>
+                <p>
+                    La creación mediante SQL requiere conocer la sintaxis del lenguaje, pero ofrece mayor flexibilidad que las interfaces gráficas. Además, cualquier gestor relacional utiliza instrucciones muy similares para crear bases de datos, lo que facilita trabajar con distintos sistemas.
+                </p>
+                <p>La creacion y su uso son de la siguiente manera:</p>
+                <code class="codigo">CREATE DATABASE nombre_de_la_base_de_datos; //Crecación de la base de datos</code>
+                <code class="codigo">USE nombre_de_la_base_de_datos;, //Uso de la base de datos</code>
 
-        <!-- Sección 2: Proceso de subida -->
+                <h3>Usando plataformas en la nube</h3>
+                <p>
+                    Con el crecimiento de los servicios en la nube, muchos proveedores ofrecen plataformas que permiten crear bases de datos relacionales sin instalar servidores físicos. En este método, el proveedor se encarga de la infraestructura, el almacenamiento, las copias de seguridad y gran parte de la administración del servidor.
+                </p>
+                <p>
+                    Una vez creada la instancia, el usuario obtiene los datos de conexión (host, puerto, usuario y contraseña), los cuales pueden utilizarse desde aplicaciones o herramientas de administración como MySQL Workbench, DBeaver o pgAdmin.
+                </p>
+                <p>
+                    Este método resulta especialmente útil para proyectos colaborativos, aplicaciones web y sistemas que requieren alta disponibilidad, ya que los proveedores suelen ofrecer mecanismos de escalabilidad, monitoreo y recuperación automática.
+                </p>
+            </div>
+        </div>
+        <!-- Sección 3: Creación de bases de datos mediante lenguaje SQL -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">3</div>
+                <h2>Creación de bases de datos mediante lenguaje SQL</h2>
+            </div>
+            <div class="temas-body">
+                <p>
+                    La creación de una base de datos mediante sintaxis SQL es uno de los métodos más utilizados en el desarrollo y administración de sistemas de información. A diferencia de las herramientas gráficas, este método consiste en escribir instrucciones utilizando el lenguaje SQL (Structured Query Language), el cual es el estándar empleado por la mayoría de los gestores de bases de datos relacionales, como MySQL, PostgreSQL, SQL Server, Oracle y MariaDB.
+                </p>
+                <p>
+                    El uso de SQL ofrece un mayor control sobre la creación y administración de la base de datos, ya que permite definir cada uno de los objetos que la conforman, como las tablas, las relaciones, los índices y las restricciones de integridad.
+                </p>
+                <p>
+                    La creación mediante sintaxis SQL es considerada una habilidad fundamental para desarrolladores, administradores de bases de datos y estudiantes, ya que proporciona un conocimiento más profundo sobre el funcionamiento interno de un sistema gestor de bases de datos.
+                </p>
+
+                <h3>Ejemplo práctico — Creación de una base de datos escolar</h3>
+                <p>Una institución educativa necesita registrar la información de sus estudiantes. Para ello se crea una base de datos llamada <strong>escuela</strong> con una tabla <strong>estudiantes</strong> que almacena los datos básicos de cada alumno.</p>
+
+                <ul class="lista">
+                    <li>
+                        <strong>Paso 1 — Crear la base de datos</strong>
+                        <p>Se define el nombre de la base de datos que va a contener todas las tablas del sistema.</p>
+                        <code>CREATE DATABASE escuela;</code>
+                    </li>
+                    <li>
+                        <strong>Paso 2 — Seleccionar la base de datos</strong>
+                        <p>Se indica al gestor que los siguientes comandos se ejecutarán dentro de esa base de datos.</p>
+                        <code>USE escuela;</code>
+                    </li>
+                    <li>
+                        <strong>Paso 3 — Crear la tabla</strong>
+                        <p>Se define la estructura de la tabla con sus columnas, tipos de datos y la clave primaria que identifica cada registro de forma única.</p>
+                        <code>CREATE TABLE estudiantes (
+id        INT PRIMARY KEY AUTO_INCREMENT,
+nombre    VARCHAR(50),
+apellido  VARCHAR(50),
+fecha_nac DATE,
+correo    VARCHAR(100)
+);</code>
+                        <p><strong>PRIMARY KEY</strong>identifica cada registro de forma única, no puede repetirse ni estar vacío.</p>
+                        <p><strong>AUTO_INCREMENT</strong>El gestor asigna el número del id automáticamente en cada inserción, sin necesidad de escribirlo manualmente.</p>
+                    </li>
+                    <li>
+                        <strong>Paso 4 — Verificar la creación</strong>
+                        <p>Se confirma que la tabla fue creada correctamente dentro de la base de datos.</p>
+                        <code>SHOW TABLES;</code>
+                    </li>
+                    <li>
+                        <strong>Paso 5 — Insertar el primer registro</strong>
+                        <p>Una vez creada la tabla se agrega el primer dato real para confirmar que la estructura funciona correctamente. El campo id no se escribe porque AUTO_INCREMENT lo genera automáticamente.</p>
+                        <code>INSERT INTO estudiantes (nombre, apellido, fecha_nac, correo) VALUES ('Ana', 'García', '2003-05-14', 'ana@correo.com');
+                        </code>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Sección 4: Buenas prácticas al crear una base de datos -->
+        <div class="temas">
+            <div class="temas-header">
+                <div class="temas-num">4</div>
+                <h2>Buenas prácticas al crear una base de datos</h2>
+            </div>
+            <div class="temas-body">
+                <p>
+                    La creación de una base de datos no consiste únicamente en definir tablas y almacenar información. Desde las primeras etapas del diseño es importante seguir una serie de buenas prácticas que permitan desarrollar una estructura organizada, eficiente y fácil de mantener. Una base de datos bien diseñada mejora el rendimiento de las consultas, reduce la duplicidad de información, facilita la administración y disminuye la probabilidad de errores durante el desarrollo de una aplicación.
+                </p>
+                <p>
+                    Aplicar estas prácticas desde el inicio también permite que la base de datos pueda crecer conforme aumenten las necesidades del sistema, sin que sea necesario realizar cambios significativos en su estructura. Además, una correcta organización favorece el trabajo colaborativo entre desarrolladores y administradores, ya que todos pueden comprender con mayor facilidad la forma en que está diseñada la información. A continuación, se presentan algunas de las recomendaciones más importantes al momento de crear una base de datos relacional.
+                </p>
+                <ul class="lista">
+                    <li>
+                        <strong>Asignar nombres descriptivos</strong>
+                        <p>
+                            Uno de los primeros aspectos que deben considerarse es la elección de nombres claros y descriptivos para las bases de datos, tablas y columnas. Los nombres deben reflejar el contenido que almacenarán, evitando abreviaturas innecesarias o palabras ambiguas que dificulten su comprensión.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Utilizar tipos de datos adecuados</strong>
+                        <p>
+                            Cada columna debe almacenar únicamente el tipo de información para el cual fue diseñada. Seleccionar el tipo de dato adecuado permite optimizar el espacio de almacenamiento y mejorar el rendimiento de las consultas.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Definir una llave primaria en cada tabla</strong>
+                        <p>
+                            Toda tabla debe contar con una llave primaria (Primary Key), ya que esta permite identificar de manera única cada uno de los registros almacenados.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Establecer relaciones entre llaves foraneas</strong>
+                        <p>
+                            Cuando la información está distribuida en varias tablas, es recomendable establecer relaciones utilizando llaves foráneas (Foreign Keys). Estas relaciones permiten mantener la integridad referencial de los datos, asegurando que la información relacionada exista antes de ser utilizada.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Evitar la duplicación de datos</strong>
+                        <p>
+                            Una de las principales características de una base de datos relacional es minimizar la repetición innecesaria de datos. Almacenar la misma información en varias tablas incrementa el riesgo de inconsistencias cuando se realizan modificaciones.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Aplicar reestricciones de integridad</strong>
+                        <p>
+                            Las restricciones permiten controlar la calidad de los datos almacenados y evitar errores durante la captura de información.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Planificar la estructura antes de implementarla</strong>
+                        <p>
+                            Antes de crear físicamente una base de datos es recomendable realizar un análisis de los datos que se almacenarán y diseñar su estructura.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Realizar respaldos periódicos</strong>
+                        <p>
+                            Una buena práctica consiste en generar copias de seguridad (backups) de la base de datos de forma periódica. Los respaldos permiten recuperar la información en caso de fallos del sistema, errores humanos o problemas de hardware.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Controlar los permisos de acceso</strong>
+                        <p>
+                            No todos los usuarios requieren el mismo nivel de acceso a una base de datos. Por ello es importante asignar únicamente los permisos necesarios según las funciones de cada usuario.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección 5: Proceso de subida -->
         <div class="temas">
             <div class="temas-header">
                 <div class="temas-num">2</div>

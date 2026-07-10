@@ -526,7 +526,7 @@
 /* ── Drop zone múltiple (drag and drop de selección) ── */
 .drop-zone-multi {
     flex: 1;
-    min-height: 200px;
+    min-height: 280px;
     border-radius: 10px;
     border: 2px dashed #cbd5e1;
     background: #f8faff;

@@ -327,6 +327,20 @@ main {
 .g-couch  { color: #c0392b; border-color: #EA2328; background: #fff5f5; }
 .g-neo    { color: #008A5E; border-color: #008A5E; background: #f0fdf8; }
 
+.codigo{
+  display: block;
+  background-color: #1e293b;
+  color: #93c5fd;
+  font-family: monospace;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 6px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
 /* ── Footer ── */
 footer {
   background: black;
