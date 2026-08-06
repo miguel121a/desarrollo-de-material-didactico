@@ -152,7 +152,7 @@ function verificar() {
             sinResponder.push(nombre);
             card.classList.add('sin-responder');
             feedback.className = 'feedback sin-responder-fb visible';
-            feedback.textContent = '⚠️ No respondiste esta pregunta.';
+            feedback.textContent = ' No respondiste esta pregunta.';
             continue;
         }
 

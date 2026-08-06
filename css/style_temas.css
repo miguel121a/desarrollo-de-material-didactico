@@ -52,7 +52,7 @@ header h2 {
 .header-description {
   font-size: 13.5px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.82);
+  color: #FFFFFFD1;
   max-width: 620px;
   margin-bottom: 20px;
   font-weight: 400;
@@ -370,4 +370,12 @@ footer h3 {
 footer p {
   font-size: 13px;
   line-height: 1.9;
+}
+
+@media (max-width:992px) {
+  	.back-btn{
+        position: static;
+		display: inline-flex;
+        margin-bottom: 20px;
+    }
 }
