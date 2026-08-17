@@ -264,7 +264,7 @@ function mostrarResultado(correctas, incorrectas) {
     resultado.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// ── Reiniciar ────────────────────────────────────────────────────
+// Reiniciar
 function reiniciar() {
     // Opción múltiple
     for (const nombre in respuestasCorrectas) {

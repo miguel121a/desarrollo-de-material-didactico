@@ -1,20 +1,3 @@
-// ================================================================
-// practica.js
-// p1  → B  ¿Cuál describe mejor una BD relacional?
-// p2  → C  ¿Ventaja de claves foráneas?
-// p3  → B  ¿Beneficio de BD en la nube?
-// p4  → C  ¿Primer paso para diseñar una BD?
-// p5  → B  ¿Principal ventaja de BD relacional?
-// p6  → D  ¿Comando para obtener información? (SELECT)
-// p7  → drag and drop
-// p8  → C  ¿Diferencia UPDATE y DELETE?
-// p9  → C  ¿Qué significa CRUD?
-// p10 → B  ¿Para qué sirve asignar privilegios?
-// p11 → D  ¿Privilegio para solo consultar? (SELECT)
-// p12 → B  ¿Ventaja de usar roles?
-// p13 → D  ¿Qué hace FLUSH PRIVILEGES?
-// ================================================================
-
 const respuestasCorrectas = {
     p1:  'A',
     p2:  'C',

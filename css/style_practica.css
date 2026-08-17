@@ -1,11 +1,4 @@
-/* ================================================================
-   style_practica.css
-   Estilos exclusivos del apartado de práctica (cuestionario).
-   El header, footer, main, back-btn y subnav ya los cubre
-   style_temas.css — aquí solo va lo nuevo.
-   ================================================================ */
-
-/* ── Intro del cuestionario ─────────────────────────────────────── */
+/* Instrucciones para la realizacion de la practica */
 .practica-intro {
     background: white;
     border-radius: 12px;
@@ -15,11 +8,6 @@
     display: flex;
     align-items: center;
     gap: 18px;
-}
-
-.practica-intro .intro-icono {
-    font-size: 38px;
-    flex-shrink: 0;
 }
 
 .practica-intro h3 {
@@ -36,24 +24,7 @@
     margin: 0;
 }
 
-.practica-stats {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-}
-
-.stat-pill {
-    background: #eff6ff;
-    color: #1e40af;
-    border-radius: 20px;
-    padding: 3px 12px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-/* ── Tarjeta de pregunta ─────────────────────────────────────────── */
+/* Tarjeta de pregunta */
 .pregunta-card {
     background: white;
     border-radius: 12px;
@@ -90,6 +61,7 @@
     flex-shrink: 0;
 }
 
+/* Pregunta */
 .pregunta-tema {
     display: inline-block;
     font-size: 11px;
@@ -113,7 +85,7 @@
     line-height: 1.5;
 }
 
-/* ── Opciones (radio buttons) ───────────────────────────────────── */
+/* Opciones (radio buttons) */
 .opciones-lista {
     list-style: none;
     padding: 0;
@@ -123,6 +95,7 @@
     gap: 8px;
 }
 
+/* Estilo del texto de las respuestas */
 .opciones-lista li label {
     display: flex;
     align-items: center;
@@ -151,7 +124,7 @@
     cursor: pointer;
 }
 
-/* ── Estados después de verificar ──────────────────────────────── */
+/* Estados de las respuestas después de verificar */
 .pregunta-card.correcta {
     border-color: #86efac;
 }
@@ -208,7 +181,7 @@
     opacity: 0.75;
 }
 
-/* ── Feedback por pregunta ──────────────────────────────────────── */
+/* contenedor de la retroalimentación por pregunta */
 .feedback {
     display: none;
     margin-top: 12px;
@@ -240,7 +213,7 @@
     border-left: 4px solid #d97706;
 }
 
-/* ── Aviso de preguntas faltantes ───────────────────────────────── */
+/* Aviso de preguntas faltantes */
 .aviso-faltantes {
     font-size: 13px;
     color: #d97706;
@@ -254,7 +227,7 @@
     display: block;
 }
 
-/* ── Botón enviar ───────────────────────────────────────────────── */
+/* Botón enviar */
 .submit-wrap {
     text-align: center;
     margin-top: 24px;
@@ -279,7 +252,7 @@
     transform: translateY(-2px);
 }
 
-/* ── Resultado final ────────────────────────────────────────────── */
+/* Contenedor donde aparece el resultado final */
 .resultado-final {
     display: none;
     background: white;
@@ -322,6 +295,7 @@
     overflow: hidden;
 }
 
+/* Barra de progreso */
 .resultado-barra {
     height: 100%;
     border-radius: 99px;
@@ -338,6 +312,7 @@
     margin-bottom: 24px;
 }
 
+/* Contendor donde aparecen los detalles del resultado */
 .detalle-pill {
     display: flex;
     align-items: center;
@@ -371,7 +346,7 @@
     transform: translateY(-2px);
 }
 
-/* ── Drag and Drop ──────────────────────────────────────────────── */
+/* Drag and Drop */
 .drag-badge {
     display: inline-block;
     font-size: 11px;
@@ -523,7 +498,7 @@
     opacity: 0.75;
 }
 
-/* ── Drop zone múltiple (drag and drop de selección) ── ////*/
+/* Drop zone múltiple (drag and drop de selección) */
 .drop-zone-multi {
     flex: 1;
     min-height: 280px;

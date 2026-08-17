@@ -10,13 +10,14 @@ body {
   color: #222;
 }
 
-/* ── Header ── */
+/* Header */
 header {
   background: linear-gradient(135deg, #1a2f8f 0%, #2563EB 100%);
   color: white;
   padding: 32px 28px 0;
 }
 
+/* Clase para el contenedor superior del header */
 .hdr-top {
   display: flex;
   align-items: flex-start;
@@ -25,10 +26,12 @@ header {
   margin-bottom: 14px;
 }
 
+/* Contenedor para tener la información a la izquierda en el header */
 .hdr-left {
   flex: 1;
 }
 
+/* Contenedor donde se muestra la unidad */
 .unidad-badge {
   display: inline-block;
   font-size: 11px;
@@ -58,7 +61,7 @@ header h2 {
   font-weight: 400;
 }
 
-/* ── Subnav ── */
+/* Barra de navegación */
 .subnav ul {
   list-style: none;
   display: flex;
@@ -67,10 +70,6 @@ header h2 {
   scrollbar-width: none;
   padding-bottom: 0;
   margin: 0;
-}
-
-.subnav ul::-webkit-scrollbar {
-  display: none;
 }
 
 .subnav ul li a {
@@ -95,7 +94,6 @@ header h2 {
   color: #1e40af;
 }
 
-/* ── Main layout ── */
 main {
   max-width: 860px;
   margin: 0 auto;
@@ -103,7 +101,7 @@ main {
   position: relative;
 }
 
-/* ── Botón volver ── */
+/* Botón para volver al inicio */
 .back-btn {
   display: inline-flex;
   align-items: center;
@@ -124,6 +122,7 @@ main {
   left: -180px;
 }
 
+/* Implementacion de contenido al botón de volver */
 .back-btn::before {
   content: '←';
   font-size: 16px;
@@ -134,7 +133,7 @@ main {
   transform: translateX(-3px);
 }
 
-/* ── Secciones ── */
+/* Cards para cada subtema del apartado */
 .temas {
   background: white;
   border-radius: 12px;
@@ -143,6 +142,7 @@ main {
   overflow: hidden;
 }
 
+/* Encabezado de cada card */
 .temas-header {
   display: flex;
   align-items: center;
@@ -152,6 +152,7 @@ main {
   background: #f8faff;
 }
 
+/* Número de cada card */
 .temas-num {
   width: 28px;
   height: 28px;
@@ -199,7 +200,7 @@ main {
   margin-bottom: 12px;
 }
 
-/* ── Lista ── */
+/* Listas */
 .lista {
   list-style: none;
   padding: 0;
@@ -243,7 +244,7 @@ main {
   word-break: break-all;
 }
 
-/* ── Tablas ── */
+/* Tablas */
 .tabla-bd {
   width: 100%;
   border-collapse: collapse;
@@ -305,7 +306,7 @@ main {
   word-break: break-all;
 }
 
-/* ── Chips de gestores ── */
+/* estilo para los gestores de bd no relacionales */
 .gestores {
   display: flex;
   gap: 10px;
@@ -322,11 +323,13 @@ main {
   border: 2px solid;
 }
 
+/* colores para cada gestor en bd no relacionales */
 .g-mongo  { color: #47A248; border-color: #47A248; background: #f0fdf0; }
 .g-cass   { color: #1287B1; border-color: #1287B1; background: #f0f8ff; }
 .g-couch  { color: #c0392b; border-color: #EA2328; background: #fff5f5; }
 .g-neo    { color: #008A5E; border-color: #008A5E; background: #f0fdf8; }
 
+/* Estilo para el los textos con la etiqueta de código */
 .codigo{
   display: block;
   background-color: #1e293b;
@@ -341,7 +344,7 @@ main {
   word-break: break-all;
 }
 
-/* ── Footer ── */
+/* Footer */
 footer {
   background: black;
   color: #94a3b8;
@@ -350,32 +353,17 @@ footer {
   margin-top: 48px;
 }
 
-.footer-inst {
-  font-size: 14px;
-  font-weight: 700;
-  color: white;
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-}
-
-footer h3 {
-  font-size: 13px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 6px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
 
 footer p {
   font-size: 13px;
   line-height: 1.9;
 }
 
+/* Query para el boton de volver en dispositivos móviles */
 @media (max-width:992px) {
   	.back-btn{
         position: static;
-		display: inline-flex;
+		    display: inline-flex;
         margin-bottom: 20px;
     }
 }

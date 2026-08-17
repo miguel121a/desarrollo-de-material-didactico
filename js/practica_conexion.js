@@ -1,17 +1,3 @@
-// ================================================================
-// practica_conexion.js
-// p1  → B   ¿Diferencia entre crear y conectarse?
-// p2  → B   ¿Para qué sirve el puerto?
-// p3  → C   ¿Por qué usar variables de entorno?
-// p4  → drag and drop: elementos para conectarse (d4-a, d4-c, d4-e, d4-g)
-// p5  → B   ¿Qué permite el consumo en la nube?
-// p6  → D   ¿Qué método especifica exactamente qué datos necesita?
-// p7  → C   ¿Qué método representa el código fetch?
-// p8  → B   ¿Ventaja del ORM?
-// p9  → drag and drop: métodos válidos de consumo (d9-a, d9-c, d9-e, d9-g)
-// p10 → C   ¿Método más adecuado para obtener solo campos específicos?
-// ================================================================
-
 const respuestasCorrectas = {
     p1:  'B',
     p2:  'B',
@@ -34,7 +20,7 @@ const explicaciones = {
     p10: 'GraphQL es el método más adecuado cuando se necesita obtener campos específicos de los datos, ya que permite definir exactamente qué información se requiere en cada consulta, evitando transferir datos innecesarios.'
 };
 
-// ── Respuestas correctas del drag and drop ───────────────────────
+// Respuestas correctas del drag and drop
 const correctasDrag4 = ['d4-a', 'd4-c', 'd4-e', 'd4-g'];
 const correctasDrag9 = ['d9-a', 'd9-c', 'd9-e', 'd9-g'];
 
