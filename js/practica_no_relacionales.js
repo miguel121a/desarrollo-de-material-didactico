@@ -1,19 +1,3 @@
-// ================================================================
-// practica_no_relacionales.js
-// p1  → B   ¿Cómo almacenan info las BD no relacionales?
-// p2  → C   ¿Para qué apps son adecuadas las NoSQL?
-// p3  → drag and drop: configurar acceso seguro (d3-a, d3-c, d3-e, d3-g)
-// p4  → B   ¿Por qué MongoDB crea BD automáticamente?
-// p5  → D   ¿Diferencia SQL vs NoSQL?
-// p6  → B   ¿Ventaja de almacenar datos relacionados en mismo registro?
-// p7  → drag and drop: identificar CRUD (d7-a, d7-c, d7-e, d7-g)
-// p8  → C   ¿Diferencia autenticación vs autorización?
-// p9  → C   ¿Para qué sirven snapshots?
-// p10 → D   ¿Qué gestor usa clave-valor?
-// p11 → D   ¿Para qué sirve configurar acceso a la red?
-// p12 → C   ¿Protocolo para cifrar datos en tránsito?
-// ================================================================
-
 const respuestasCorrectas = {
     p1:  'B',
     p2:  'C',
@@ -40,13 +24,13 @@ const explicaciones = {
     p12: 'TLS/SSL es el protocolo estándar para cifrar la comunicación entre una aplicación y la base de datos, protegiendo los datos mientras viajan por la red.'
 };
 
-// ── Respuestas correctas del drag and drop ───────────────────────
+// Respuestas correctas del drag and drop
 const correctasDrag3 = ['d3-a', 'd3-c', 'd3-e', 'd3-g'];
 const correctasDrag7 = ['d7-a', 'd7-c', 'd7-e', 'd7-g'];
 
 let elementoArrastrado = null;
 
-// ── Inicializar drag and drop ────────────────────────────────────
+// Inicializar drag and drop
 document.addEventListener('DOMContentLoaded', () => {
     iniciarDrag('drag-source-3', 'drop-zone-3');
     iniciarDrag('drag-source-7', 'drop-zone-7');
@@ -104,7 +88,7 @@ function iniciarDrag(sourceId, zoneId) {
     });
 }
 
-// ── Validar drag and drop de selección ──────────────────────────
+// Validar drag and drop de selección
 function validarDragSeleccion(zoneId, correctas, feedbackId, cardId) {
     const zone     = document.getElementById(zoneId);
     const feedback = document.getElementById(feedbackId);
@@ -158,7 +142,7 @@ function validarDragSeleccion(zoneId, correctas, feedbackId, cardId) {
     return esCorrecto;
 }
 
-// ── Verificar todo ───────────────────────────────────────────────
+// Verificar todo
 function verificar() {
     let correctas   = 0;
     let incorrectas = 0;
@@ -236,7 +220,7 @@ function verificar() {
     mostrarResultado(correctas, incorrectas);
 }
 
-// ── Resultado final ──────────────────────────────────────────────
+// ── Resultado final
 function mostrarResultado(correctas, incorrectas) {
     const total = Object.keys(respuestasCorrectas).length + 2; // +2 drag
     const pct   = Math.round((correctas / total) * 100);

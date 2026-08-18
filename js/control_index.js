@@ -1,4 +1,4 @@
-// ── Orden de las tarjetas ──────────────────────────────────────────
+// Orden de las tarjetas
 // Define el orden progresivo: cada posición es [cardId, checkboxId, btnId]
 const tarjetas = [
     { card: 'c1', checkbox: 'cb1', btn: 'btn1' },
@@ -8,7 +8,7 @@ const tarjetas = [
     { card: 'c5', checkbox: 'cb5', btn: 'btn5' },
 ];
 
-// ── Guardar y cargar progreso en localStorage ──────────────────────
+// Guardar y cargar progreso en localStorage
 function guardarProgreso(progreso) {
     localStorage.setItem('progreso_temas', JSON.stringify(progreso));
 }
@@ -25,7 +25,7 @@ function cargarProgreso() {
     return JSON.parse(guardado);
 }
 
-// ── Aplicar estado visual a cada tarjeta ──────────────────────────
+// Aplicar estado visual a cada tarjeta
 function aplicarEstado(progreso) {
     tarjetas.forEach((t, i) => {
         const card     = document.getElementById(t.card);
@@ -34,7 +34,7 @@ function aplicarEstado(progreso) {
         const estado   = progreso[i];
 
         if (estado.desbloqueada) {
-            // ── Tarjeta habilitada ──
+            // Tarjeta habilitada
             card.classList.remove('bloqueada');
             checkbox.classList.remove('checkbox-bloqueado');
             checkbox.onclick = () => marcarCompletada(i, progreso);
@@ -54,7 +54,7 @@ function aplicarEstado(progreso) {
             if (btn) btn.disabled = false;
 
         } else {
-            // ── Tarjeta bloqueada ──
+            // Tarjeta bloqueada
             card.classList.add('bloqueada');
             card.classList.remove('checked');
             checkbox.classList.add('checkbox-bloqueado');
@@ -69,7 +69,7 @@ function aplicarEstado(progreso) {
     });
 }
 
-// ── Marcar tarjeta como completada y desbloquear la siguiente ─────
+// Marcar tarjeta como completada y desbloquear la siguiente
 function marcarCompletada(indice, progreso) {
     // Alternar completada/no completada
     progreso[indice].completada = !progreso[indice].completada;
@@ -95,7 +95,7 @@ function marcarCompletada(indice, progreso) {
     aplicarEstado(progreso);
 }
 
-// ── Inicializar al cargar la página ───────────────────────────────
+// ── Inicializar al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
     const progreso = cargarProgreso();
     aplicarEstado(progreso);
